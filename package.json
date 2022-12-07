@@ -1,0 +1,23 @@
+{
+  "type": "module",
+  "name": "zuriserve-conditions",
+  "version": "1.0.0",
+  "description": "zuriserve conditions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/japheth-waswa/zuriserve-conditions.git"
+  },
+  "keywords": [
+    "zuriserve-conditions"
+  ],
+  "author": "Japheth Waswa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/japheth-waswa/zuriserve-conditions/issues"
+  },
+  "homepage": "https://github.com/japheth-waswa/zuriserve-conditions#readme"
+}
