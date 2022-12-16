@@ -3,6 +3,7 @@ import {
   processObjectWithConditions,
 } from "./lib/conditions.extractor.js";
 import { processFeesConditionalResult } from "./lib/fee.conditions.js";
+import { extractFormulaeVariables, formulaeValidate } from "./lib/formulae.validation.js";
 import { processObjectConditionalResult } from "./lib/object.conditions.js";
 import { processTransactionData } from "./lib/transaction.data.js";
 import {
@@ -18,7 +19,7 @@ import {
  * 2. fee conditions (/\)
  * 3. end result conditions
  * todo `conditional result` can be gotten for specified objects in list ie [object1,object2] or if an empty list [] then compute all conditional results for all objects
- *
+ * todo add method to test formulae format,ie just replace all variable with 1 then eval() the formulae, return true or false.
  */
 
 export const OBJECT_SECTIONS_BINDER = OBJECT_SECTIONS_BINDER_UTIL;
@@ -28,6 +29,24 @@ export const OBJECTLABEL_FIELD_VALUE_OPENING_CLOSING_TAGS =
   OBJECTLABEL_FIELD_VALUE_OPENING_CLOSING_TAGS_UTIL;
 export const OBJECTLABEL_LARGEDATASET_FIELD_OPENING_CLOSING_TAGS =
   OBJECTLABEL_LARGEDATASET_FIELD_OPENING_CLOSING_TAGS_UTIL;
+
+  /**
+ * Computes formulae to validate whether it computes successfuly.
+ * @param {*} param0
+ * @returns int | float | string
+ */
+export const parseFormulaeValidate = ({ formulae, formulaeData={} }) => {
+  return formulaeValidate({ formulae, formulaeData });
+}
+
+/**
+ * Extract formulae variables from the formulae
+ * @param {*} param0
+ * @returns {formulaeVar1:formulaeVar1,formulaeVar2:formulaeVar2}
+ */
+export const parseExtractFormulaeVariables = ({ formulae }) => {
+  return extractFormulaeVariables({ formulae });
+};
 
 /**
  * Interface
@@ -58,7 +77,7 @@ export const parseFeesConditionalResult = ({
  * Interface
  * Extracts fees's conditions from list of steps
  * @param {*} param0
- * @param steps :- [{fees:[]},{fees:[{id,feeType,formulae,conditions}]}]
+ * @param steps :- [{fees:[]},{fees:[{id,name,feeType,formulae,conditions,triggerStepObjects}]}]
  * @returns {feesObject,triggerStepObjects} || false
  */
 export const parseExtractFeesWithConditionsFromSteps = ({ steps }) => {
