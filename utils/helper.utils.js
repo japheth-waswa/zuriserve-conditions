@@ -17,6 +17,18 @@ export const OBJECTLABEL_LARGEDATASET_FIELD_OPENING_CLOSING_TAGS_UTIL = {
   stringVarClosing: /##!/g,
   stringVarClosingStr: "##!",
 };
+export const ENDRESULT_OBJECT_OPENING_CLOSING_TAGS_UTIL = {
+  stringVarOpening: /🍼/g,
+  stringVarOpeningStr: "🍼",
+  stringVarClosing: /🍺/g,
+  stringVarClosingStr: "🍺",
+};
+export const ENDRESULT_FEE_OPENING_CLOSING_TAGS_UTIL = {
+  stringVarOpening: /🏝️/g,
+  stringVarOpeningStr: "🏝️",
+  stringVarClosing: /🏖️/g,
+  stringVarClosingStr: "🏖️",
+};
 
 /**
  *
