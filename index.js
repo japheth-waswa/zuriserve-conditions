@@ -2,6 +2,7 @@ import {
   processExtractFeesWithConditionsFromSteps,
   processObjectWithConditions,
 } from "./lib/conditions.extractor.js";
+import { processEndResultVarGroup, processEndResultVars } from "./lib/endresult.processor.js";
 import { processFeesConditionalResult } from "./lib/fee.conditions.js";
 import { extractFormulaeVariables, formulaeValidate } from "./lib/formulae.validation.js";
 import { processObjectConditionalResult } from "./lib/object.conditions.js";
@@ -29,6 +30,24 @@ export const OBJECTLABEL_FIELD_VALUE_OPENING_CLOSING_TAGS =
   OBJECTLABEL_FIELD_VALUE_OPENING_CLOSING_TAGS_UTIL;
 export const OBJECTLABEL_LARGEDATASET_FIELD_OPENING_CLOSING_TAGS =
   OBJECTLABEL_LARGEDATASET_FIELD_OPENING_CLOSING_TAGS_UTIL;
+
+  /**
+ * Extract data variables from content string from the editor.
+ * @param {*} param0
+ * @returns {objects:{},fees:{},statics:[],formulaes:{}}
+ */
+export const parseEndResultVarGroup = ({ contentString }) => {
+  return processEndResultVarGroup({ contentString });
+}
+
+  /**
+ * Extract endresult variables
+ * @param {*} param0
+ * @returns {objects:{backoffice:{objectLabel1:{}},client:{objectLabel2:{}}},fees:{backoffice:{stepFeeId1:{name}}}}
+ */
+export const parseEndResultVars = ({ stepsList }) => {
+  return processEndResultVars({ stepsList });
+}
 
   /**
  * Computes formulae to validate whether it computes successfuly.

@@ -1,4 +1,5 @@
 export const OBJECT_SECTIONS_BINDER_UTIL = "@@";
+export const ENDRESULT_DECORATOR_BINDER_UTIL = "🫐";
 export const LARGEDATASET_FIELD_OPENING_CLOSING_TAGS_UTIL = {
   stringVarOpening: /<<</g,
   stringVarOpeningStr: "<<<",
@@ -28,6 +29,210 @@ export const ENDRESULT_FEE_OPENING_CLOSING_TAGS_UTIL = {
   stringVarOpeningStr: "🏝️",
   stringVarClosing: /🏖️/g,
   stringVarClosingStr: "🏖️",
+};
+export const ENDRESULT_FORMULAE_OPENING_CLOSING_TAGS_UTIL = {
+  stringVarOpening: /🉐/g,
+  stringVarOpeningStr: "🉐",
+  stringVarClosing: /🈹/g,
+  stringVarClosingStr: "🈹",
+};
+export const ENDRESULT_STATIC_VARS_OPENING_CLOSING_TAGS_UTIL = {
+  stringVarOpening: /🧩/g,
+  stringVarOpeningStr: "🧩",
+  stringVarClosing: /🪗/g,
+  stringVarClosingStr: "🪗",
+};
+export const ENDRESULT_QRCODE_OPENING_CLOSING_TAGS_UTIL = {
+  stringVarOpening: /🌱/g,
+  stringVarOpeningStr: "🌱",
+  stringVarClosing: /🍀/g,
+  stringVarClosingStr: "🍀",
+};
+
+export const ENDRESULT_STATICS = {
+  "backoffice fees": {
+    label: "backoffice fees",
+    value: "backofficeFees",
+    type: "backofficeFees",
+  },
+  "client fees": {
+    label: "client fees",
+    value: "clientFees",
+    type: "clientFees",
+  },
+  "ussd fees": {
+    label: "ussd fees",
+    value: "ussdFees",
+    type: "ussdFees",
+  },
+
+  "backoffice received payments": {
+    label: "backoffice received payments",
+    value: "backofficeReceivedPayments",
+    type: "backofficeReceivedPayments",
+  },
+  "client received payments": {
+    label: "client received payments",
+    value: "clientReceivedPayments",
+    type: "clientReceivedPayments",
+  },
+  "ussd received payments": {
+    label: "ussd received payments",
+    value: "ussdReceivedPayments",
+    type: "ussdReceivedPayments",
+  },
+
+  "backoffice pending bills": {
+    label: "backoffice pending bills",
+    value: "backofficePendingBills",
+    type: "backofficePendingBills",
+  },
+  "client pending bills": {
+    label: "client pending bills",
+    value: "clientPendingBills",
+    type: "clientPendingBills",
+  },
+  "ussd pending bills": {
+    label: "ussd pending bills",
+    value: "ussdPendingBills",
+    type: "ussdPendingBills",
+  },
+
+  "backoffice bill ref no": {
+    label: "backoffice bill ref no",
+    value: "backofficeBillRefNo",
+    type: "backofficeBillRefNo",
+  },
+  "client bill ref no": {
+    label: "client bill ref no",
+    value: "clientBillRefNo",
+    type: "clientBillRefNo",
+  },
+  "ussd bill ref no": {
+    label: "ussd bill ref no",
+    value: "ussdBillRefNo",
+    type: "ussdBillRefNo",
+  },
+
+  "transaction ref no": {
+    label: "transaction ref no",
+    value: "transactionRefNo",
+    type: "transactionRefNo",
+  },
+  "service name": {
+    label: "service name",
+    value: "serviceName",
+    type: "serviceName",
+  },
+
+  "transaction creation date": {
+    label: "transaction creation date",
+    value: "transactionCreationDate",
+    type: "transactionCreationDate",
+  },
+  "transaction completion date": {
+    label: "transaction completion date",
+    value: "transactionCompletionDate",
+    type: "transactionCompletionDate",
+  },
+
+  "transaction initiator full names": {
+    label: "transaction initiator full names",
+    value: "transactionInitiatorFullNames",
+    type: "transactionInitiatorFullNames",
+  },
+  "transaction initiator first name": {
+    label: "transaction initiator first name",
+    value: "transactionInitiatorFirstName",
+    type: "transactionInitiatorFirstName",
+  },
+
+  "client full names": {
+    label: "client full names",
+    value: "clientFullNames",
+    type: "clientFullNames",
+  },
+  "client first name": {
+    label: "client first name",
+    value: "clientFirstName",
+    type: "clientFirstName",
+  },
+
+  "current department": {
+    label: "current department",
+    value: "currentDepartment",
+    type: "currentDepartment",
+  },
+  "current department with levels": {
+    label: "current department with levels",
+    value: "currentDepartmentWithLevels",
+    type: "currentDepartmentWithLevels",
+  },
+  "current department with level approvers": {
+    label: "current department with level approvers",
+    value: "currentDepartmentWithLevelApprovers",
+    type: "currentDepartmentWithLevelApprovers",
+  },
+
+  "previous departments": {
+    label: "previous departments",
+    value: "previousDepartments",
+    type: "previousDepartments",
+  },
+  "previous departments with levels": {
+    label: "previous departments with levels",
+    value: "previousDepartmentsWithLevels",
+    type: "previousDepartmentsWithLevels",
+  },
+  "previous departments with level approvers": {
+    label: "previous departments with level approvers",
+    value: "previousDepartmentsWithLevelApprovers",
+    type: "previousDepartmentsWithLevelApprovers",
+  },
+
+  "next departments": {
+    label: "next departments",
+    value: "nextDepartments",
+    type: "nextDepartments",
+  },
+  "next departments with levels": {
+    label: "next departments with levels",
+    value: "nextDepartmentsWithLevels",
+    type: "nextDepartmentsWithLevels",
+  },
+
+  "current date": {
+    label: "current date",
+    value: "currentDate",
+    type: "currentDate",
+  },
+  "file verification url": {
+    label: "file verification url",
+    value: "fileVerificationURL",
+    type: "fileVerificationURL",
+  },
+};
+export const ENDRESULT_DECORATORS = {
+  "to lowercase": {
+    label: "to lowercase",
+    value: "toLowerCase",
+    type: "toLowerCase",
+  },
+  "to uppercase": {
+    label: "to uppercase",
+    value: "toUpperCase",
+    type: "toUpperCase",
+  },
+  "date format:- 1970-01-01 23:09:12": {
+    label: "date format:- 1970-01-01 23:09:12",
+    value: "Y-m-d H:i:s",
+    type: "date",
+  },
+  "date format:- 23/12/1970": {
+    label: "date format:- 23/12/1970",
+    value: "d/m/Y",
+    type: "date",
+  },
 };
 
 /**
