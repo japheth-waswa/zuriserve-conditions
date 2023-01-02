@@ -1,5 +1,5 @@
 export const OBJECT_SECTIONS_BINDER_UTIL = "@@";
-export const ENDRESULT_DECORATOR_BINDER_UTIL = "🫐";
+export const ENDRESULT_DECORATOR_BINDER_UTIL = "⟤";
 export const LARGEDATASET_FIELD_OPENING_CLOSING_TAGS_UTIL = {
   stringVarOpening: /<<</g,
   stringVarOpeningStr: "<<<",
@@ -19,34 +19,34 @@ export const OBJECTLABEL_LARGEDATASET_FIELD_OPENING_CLOSING_TAGS_UTIL = {
   stringVarClosingStr: "##!",
 };
 export const ENDRESULT_OBJECT_OPENING_CLOSING_TAGS_UTIL = {
-  stringVarOpening: /🍼/g,
-  stringVarOpeningStr: "🍼",
-  stringVarClosing: /🍺/g,
-  stringVarClosingStr: "🍺",
+  stringVarOpening: /⋉/g,
+  stringVarOpeningStr: "⋉",
+  stringVarClosing: /⋊/g,
+  stringVarClosingStr: "⋊",
 };
 export const ENDRESULT_FEE_OPENING_CLOSING_TAGS_UTIL = {
-  stringVarOpening: /🏝️/g,
-  stringVarOpeningStr: "🏝️",
-  stringVarClosing: /🏖️/g,
-  stringVarClosingStr: "🏖️",
+  stringVarOpening: /⋤/g,
+  stringVarOpeningStr: "⋤",
+  stringVarClosing: /⋥/g,
+  stringVarClosingStr: "⋥",
 };
 export const ENDRESULT_FORMULAE_OPENING_CLOSING_TAGS_UTIL = {
-  stringVarOpening: /🉐/g,
-  stringVarOpeningStr: "🉐",
-  stringVarClosing: /🈹/g,
-  stringVarClosingStr: "🈹",
+  stringVarOpening: /⨭/g,
+  stringVarOpeningStr: "⨭",
+  stringVarClosing: /⨮/g,
+  stringVarClosingStr: "⨮",
 };
 export const ENDRESULT_STATIC_VARS_OPENING_CLOSING_TAGS_UTIL = {
-  stringVarOpening: /🧩/g,
-  stringVarOpeningStr: "🧩",
-  stringVarClosing: /🪗/g,
-  stringVarClosingStr: "🪗",
+  stringVarOpening: /⋋/g,
+  stringVarOpeningStr: "⋋",
+  stringVarClosing: /⋌/g,
+  stringVarClosingStr: "⋌",
 };
 export const ENDRESULT_QRCODE_OPENING_CLOSING_TAGS_UTIL = {
-  stringVarOpening: /🌱/g,
-  stringVarOpeningStr: "🌱",
-  stringVarClosing: /🍀/g,
-  stringVarClosingStr: "🍀",
+  stringVarOpening: /⫍/g,
+  stringVarOpeningStr: "⫍",
+  stringVarClosing: /⫎/g,
+  stringVarClosingStr: "⫎",
 };
 
 export const ENDRESULT_STATICS = {
@@ -225,12 +225,27 @@ export const ENDRESULT_DECORATORS = {
   },
   "date format:- 1970-01-01 23:09:12": {
     label: "date format:- 1970-01-01 23:09:12",
-    value: "Y-m-d H:i:s",
+    value: "YYYY-MM-DD HH:mm:ss",
     type: "date",
   },
   "date format:- 23/12/1970": {
     label: "date format:- 23/12/1970",
-    value: "d/m/Y",
+    value: "DD/MM/YYYY",
+    type: "date",
+  },
+  "date format:- 23/12/1970 12:18 pm": {
+    label: "date format:- 23/12/1970 12:18 pm",
+    value: "DD/MM/YYYY h:mm a",
+    type: "date",
+  },
+  "date format:- Aug 13, 1970": {
+    label: "date format:- Aug 13, 1970",
+    value: "MMM DD, YYYY",
+    type: "date",
+  },
+  "date format:- December 13, 1970": {
+    label: "date format:- December 13, 1970",
+    value: "MMMM DD, YYYY",
     type: "date",
   },
 };
