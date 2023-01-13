@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "zuriserve-conditions",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "zuriserve conditions",
   "main": "index.js",
   "scripts": {
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/japheth-waswa/zuriserve-conditions/issues"
   },
-  "homepage": "https://github.com/japheth-waswa/zuriserve-conditions#readme"
+  "homepage": "https://github.com/japheth-waswa/zuriserve-conditions#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
