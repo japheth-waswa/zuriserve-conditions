@@ -30,6 +30,18 @@ export const ENDRESULT_FEE_OPENING_CLOSING_TAGS_UTIL = {
   stringVarClosing: /⋥/g,
   stringVarClosingStr: "⋥",
 };
+export const ENDRESULT_FORMULAE_LIST_OPENING_CLOSING_TAGS_UTIL = {
+  stringVarOpening: /⫷/g,
+  stringVarOpeningStr: "⫷",
+  stringVarClosing: /⫸/g,
+  stringVarClosingStr: "⫸",
+};
+export const ENDRESULT_FORMULAE_CUSTOMFIELD_OPENING_CLOSING_TAGS_UTIL = {
+  stringVarOpening: /⩚/g,
+  stringVarOpeningStr: "⩚",
+  stringVarClosing: /⩛/g,
+  stringVarClosingStr: "⩛",
+};
 export const ENDRESULT_FORMULAE_OPENING_CLOSING_TAGS_UTIL = {
   stringVarOpening: /⨭/g,
   stringVarOpeningStr: "⨭",
