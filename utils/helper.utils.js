@@ -62,7 +62,7 @@ export const ENDRESULT_QRCODE_OPENING_CLOSING_TAGS_UTIL = {
 };
 
 export const ENDRESULT_STATICS = {
-  "backoffice fees": {
+  /**"backoffice fees": {
     label: "backoffice fees",
     value: "backofficeFees",
     type: "backofficeFees",
@@ -125,6 +125,7 @@ export const ENDRESULT_STATICS = {
     value: "ussdBillRefNo",
     type: "ussdBillRefNo",
   },
+  **/
 
   "transaction ref no": {
     label: "transaction ref no",

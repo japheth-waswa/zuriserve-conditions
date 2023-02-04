@@ -1,4 +1,5 @@
 import {
+  processExtractFeesWithConditionsFromFeeGroups,
   processExtractFeesWithConditionsFromSteps,
   processObjectWithConditions,
 } from "./lib/conditions.extractor.js";
@@ -90,6 +91,17 @@ export const parseFeesConditionalResult = ({
     triggerStepObjects,
     byPassConditionalStatements,
   });
+};
+
+/**
+ * Interface
+ * Extracts fees's conditions from list of fee groups
+ * @param {*} param0
+ * @param feeGroups :- [{feeGroupFees:[]},{feeGroupFees:[{id,feeType,formulae,conditions}]}]
+ * @returns {feesObject,triggerStepObjects} || false
+ */
+export const parseExtractFeesWithConditionsFromFeeGroups = ({ feeGroups }) => {
+  return processExtractFeesWithConditionsFromFeeGroups({ feeGroups });
 };
 
 /**
