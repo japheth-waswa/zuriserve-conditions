@@ -1,12 +1,22 @@
 import {
   processExtractFeesWithConditionsFromFeeGroups,
   processExtractFeesWithConditionsFromSteps,
+  processGlobalConditionalStatementsExtractor,
   processObjectWithConditions,
 } from "./lib/conditions.extractor.js";
-import { processEndResultVarGroup, processEndResultVars } from "./lib/endresult.processor.js";
+import {
+  processEndResultVarGroup,
+  processEndResultVars,
+} from "./lib/endresult.processor.js";
 import { processFeesConditionalResult } from "./lib/fee.conditions.js";
-import { extractFormulaeVariables, formulaeValidate } from "./lib/formulae.validation.js";
-import { processObjectConditionalResult } from "./lib/object.conditions.js";
+import {
+  extractFormulaeVariables,
+  formulaeValidate,
+} from "./lib/formulae.validation.js";
+import {
+  processConditionalStatements,
+  processObjectConditionalResult,
+} from "./lib/object.conditions.js";
 import { processTransactionData } from "./lib/transaction.data.js";
 import {
   LARGEDATASET_FIELD_OPENING_CLOSING_TAGS_UTIL,
@@ -32,32 +42,62 @@ export const OBJECTLABEL_FIELD_VALUE_OPENING_CLOSING_TAGS =
 export const OBJECTLABEL_LARGEDATASET_FIELD_OPENING_CLOSING_TAGS =
   OBJECTLABEL_LARGEDATASET_FIELD_OPENING_CLOSING_TAGS_UTIL;
 
-  /**
+/**
+ *
+ * Globally compute conditional statements
+ * @param {*} param0
+ * @param conditionalStatements :- use the method `parseGlobalConditionalStatementsExtractor` to get this []
+ * @param objectLabelsData :- use the method `parseTransactionData` to get this {}
+ * @returns true | false
+ */
+export const parseConditionalStatements = ({
+  conditionalStatements,
+  objectLabelsData,
+}) => {
+  return processConditionalStatements({
+    conditionalStatements,
+    objectLabelsData,
+    forType: "forGlobal",
+  });
+};
+
+/**
+ *
+ * Extracts conditional statements
+ * @param {*} param0
+ * @param conditions :- {"0de2c604-8e93-4a04-8b58-276a2a50eab5" : {conditionId,conditionalStatements:[]},"1de2c604-8e93-4a04-8b58-276a2a50eab9" : {conditionId,conditionalStatements:[]}}
+ * @returns {conditionalStatements:[[],[],[]]} || false
+ */
+export const parseGlobalConditionalStatementsExtractor = ({ conditions }) => {
+  return processGlobalConditionalStatementsExtractor({ conditions });
+};
+
+/**
  * Extract data variables from content string from the editor.
  * @param {*} param0
  * @returns {objects:{},fees:{},statics:[],formulaes:{}}
  */
 export const parseEndResultVarGroup = ({ contentString }) => {
   return processEndResultVarGroup({ contentString });
-}
+};
 
-  /**
+/**
  * Extract endresult variables
  * @param {*} param0
  * @returns {objects:{backoffice:{objectLabel1:{}},client:{objectLabel2:{}}},fees:{backoffice:{stepFeeId1:{name}}}}
  */
 export const parseEndResultVars = ({ stepsList }) => {
   return processEndResultVars({ stepsList });
-}
+};
 
-  /**
+/**
  * Computes formulae to validate whether it computes successfuly.
  * @param {*} param0
  * @returns int | float | string
  */
-export const parseFormulaeValidate = ({ formulae, formulaeData={} }) => {
+export const parseFormulaeValidate = ({ formulae, formulaeData = {} }) => {
   return formulaeValidate({ formulae, formulaeData });
-}
+};
 
 /**
  * Extract formulae variables from the formulae
