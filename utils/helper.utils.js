@@ -60,6 +60,12 @@ export const ENDRESULT_QRCODE_OPENING_CLOSING_TAGS_UTIL = {
   stringVarClosing: /⫎/g,
   stringVarClosingStr: "⫎",
 };
+export const INVOICE_OPENING_CLOSING_TAGS_UTIL = {
+  stringVarOpening: /⊞/g,
+  stringVarOpeningStr: "⊞",
+  stringVarClosing: /⊟/g,
+  stringVarClosingStr: "⊟",
+};
 
 export const ENDRESULT_STATICS = {
   /**"backoffice fees": {
@@ -260,6 +266,13 @@ export const ENDRESULT_DECORATORS = {
     label: "date format:- December 13, 1970",
     value: "MMMM DD, YYYY",
     type: "date",
+  },
+};
+export const INVOICE_STATICS = {
+  "invoice": {
+    label: "invoice",
+    value: "invoice",
+    type: "invoice",
   },
 };
 
