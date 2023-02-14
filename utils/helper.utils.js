@@ -1,3 +1,17 @@
+export const CONDITIONAL_STATEMENT_OPERATORS = {
+  notEmpty: "Has value",
+  is: "Is",
+  contains: "Contains",
+  lessThan: "Less Than",
+  lessThanOrEqualTo: "Less Than or Equal To",
+  greaterThan: "Greater Than",
+  greaterThanOrEqualTo: "Greater Than or Equal To",
+  in: "In (separate values with comma)",
+  isNot: "Is Not",
+  doesNotContain: "Does not contain",
+  notIn: "Not in (separate values with comma)",
+};
+
 export const OBJECT_SECTIONS_BINDER_UTIL = "@@";
 export const ENDRESULT_DECORATOR_BINDER_UTIL = "⟤";
 export const LARGEDATASET_FIELD_OPENING_CLOSING_TAGS_UTIL = {
@@ -269,7 +283,7 @@ export const ENDRESULT_DECORATORS = {
   },
 };
 export const INVOICE_STATICS = {
-  "invoice": {
+  invoice: {
     label: "invoice",
     value: "invoice",
     type: "invoice",
