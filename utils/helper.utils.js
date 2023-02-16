@@ -12,6 +12,44 @@ export const CONDITIONAL_STATEMENT_OPERATORS = {
   notIn: "Not in (separate values with comma)",
 };
 
+export const QUERY_BUILDER_OPERANDS = {
+  EQUALS: {
+    value: "equals",
+    label: "Equals",
+  },
+  NOT_EQUALS: {
+    value: "notEquals",
+    label: "Not Equals",
+  },
+  LIKE: {
+    value: "like",
+    label: "Like",
+  },
+};
+
+export const QUERY_BUILDER_RECORD_TYPES = {
+  SINGLE: {
+    value: "single",
+    label: "Single Record",
+  },
+  MULTIPLE: { value: "multiple", label: "Multiple Records" },
+};
+
+export const QUERY_BUILDER_MATCH_TYPES = {
+  TERM: {
+    value: "term",
+    label: "Term",
+  },
+  OBJECTFIELD: { value: "objectField", label: "Largedataset Field" },
+};
+
+export const OBJECT_ACTION_TYPES = {
+  HIDE: { name: "Hide object", value: "hide" },
+  SHOW: { name: "Show object", value: "show" },
+  RESTRICTVALUE: { name: "Restrict value", value: "restrictValue" },
+  CHANGEVALUE: { name: "Change value", value: "changeValue" },
+};
+
 export const OBJECT_SECTIONS_BINDER_UTIL = "@@";
 export const ENDRESULT_DECORATOR_BINDER_UTIL = "⟤";
 export const LARGEDATASET_FIELD_OPENING_CLOSING_TAGS_UTIL = {
