@@ -43,6 +43,15 @@ export const QUERY_BUILDER_MATCH_TYPES = {
   OBJECTFIELD: { value: "objectField", label: "Largedataset Field" },
 };
 
+export const STEP_OBJECT_VISIBILITY = {
+  VISIBLE: {
+    value: 1,
+    label: "Visible",
+  },
+  // INVISIBLE: { value: 2, label: "Invisible" },
+  HIDDEN: { value: 3, label: "Hidden" },
+};
+
 export const OBJECT_ACTION_TYPES = {
   HIDE: { name: "Hide object", value: "hide" },
   SHOW: { name: "Show object", value: "show" },
