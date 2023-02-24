@@ -336,6 +336,11 @@ export const INVOICE_STATICS = {
     type: "invoice",
   },
 };
+export const SERVICE_CRITERIA_CONSTS = {
+  CURRENT_DAY: "currentDay",
+  CURRENT_MONTH: "currentMonth",
+  CURRENT_YEAR: "currentYear",
+};
 
 /**
  *
