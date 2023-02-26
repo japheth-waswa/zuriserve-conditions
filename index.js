@@ -44,7 +44,6 @@ export const OBJECTLABEL_FIELD_VALUE_OPENING_CLOSING_TAGS =
 export const OBJECTLABEL_LARGEDATASET_FIELD_OPENING_CLOSING_TAGS =
   OBJECTLABEL_LARGEDATASET_FIELD_OPENING_CLOSING_TAGS_UTIL;
 
-
 /**
  * Computes step condition(s) v2
  * @param {*} param0
@@ -53,13 +52,14 @@ export const OBJECTLABEL_LARGEDATASET_FIELD_OPENING_CLOSING_TAGS =
 export const parseStepConditionsV2 = ({
   objectLabelsData = {},
   conditions = [],
+  assignable = false,
 }) => {
   return processStepConditionsV2({
     objectLabelsData,
     conditions,
+    assignable,
   });
 };
-
 
 /**
  * Computes step condition(s)
