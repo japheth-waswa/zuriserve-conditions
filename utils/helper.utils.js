@@ -25,6 +25,22 @@ export const QUERY_BUILDER_OPERANDS = {
     value: "like",
     label: "Like",
   },
+  GT: {
+    value: "gt",
+    label: "Greater than",
+  },
+  GTE: {
+    value: "gte",
+    label: "Greater than or equal to",
+  },
+  LT: {
+    value: "lt",
+    label: "Less than",
+  },
+  LTE: {
+    value: "lte",
+    label: "Less than or equal to ",
+  },
 };
 
 export const QUERY_BUILDER_RECORD_TYPES = {
@@ -41,6 +57,11 @@ export const QUERY_BUILDER_MATCH_TYPES = {
     label: "Term",
   },
   OBJECTFIELD: { value: "objectField", label: "Largedataset Field" },
+  CONSTANTVAR: { value: "constantVar", label: "Constants" },
+  NONLARGEDATASETOBJECTFIELD: {
+    value: "nonLargedatasetObjectField",
+    label: "Non-Largedataset object labels",
+  },
 };
 
 export const STEP_OBJECT_VISIBILITY = {
@@ -52,12 +73,93 @@ export const STEP_OBJECT_VISIBILITY = {
   HIDDEN: { value: 3, label: "Hidden" },
 };
 
+export const ASSIGN_RECORD_TYPES = {
+  ASSIGN: {
+    value: "assign",
+    label: "Assign",
+  },
+  DONTASSIGN: { value: "dontassign", label: "Don't Assign" },
+};
+
 export const OBJECT_ACTION_TYPES = {
   HIDE: { name: "Hide object", value: "hide" },
   SHOW: { name: "Show object", value: "show" },
   RESTRICTVALUE: { name: "Restrict value", value: "restrictValue" },
   CHANGEVALUE: { name: "Change value", value: "changeValue" },
 };
+
+export const GLOBAL_DATA_CONSTS = {
+  CURRENT_DAY_TIME: { value: "currentDayTime", label: "Current Day & Time" },
+  CURRENT_DAY_START: {
+    value: "currentDayStart",
+    label: "Start of current day",
+  },
+  CURRENT_DAY_END: { value: "currentDayEnd", label: "End of current day" },
+  CURRENT_MONTH_START: {
+    value: "currentMonthStart",
+    label: "Start of current month",
+  },
+  CURRENT_MONTH_END: {
+    value: "currentMonthEnd",
+    label: "End of current month",
+  },
+  CURRENT_YEAR_START: {
+    value: "currentYearStart",
+    label: "Start of current year",
+  },
+  CURRENT_YEAR_END: { value: "currentYearEnd", label: "End of current year" },
+};
+
+export const GLOBAL_CONSTS_LIST = Object.values(GLOBAL_DATA_CONSTS).map(
+  ({ value }) => value
+);
+
+export const GLOBAL_DATA_CONSTS_DATE_TYPES = [
+  GLOBAL_DATA_CONSTS.CURRENT_DAY_TIME.value,
+  GLOBAL_DATA_CONSTS.CURRENT_DAY_START.value,
+  GLOBAL_DATA_CONSTS.CURRENT_DAY_END.value,
+  GLOBAL_DATA_CONSTS.CURRENT_MONTH_START.value,
+  GLOBAL_DATA_CONSTS.CURRENT_MONTH_END.value,
+  GLOBAL_DATA_CONSTS.CURRENT_YEAR_START.value,
+  GLOBAL_DATA_CONSTS.CURRENT_YEAR_END.value,
+];
+
+export const DATE_TYPE_OPERANDS = {
+  ADD: { value: "add", label: "Add" },
+  SUBTRACT: {
+    value: "subtract",
+    label: "Subtract",
+  },
+};
+
+export const DATE_TYPE_OPERANDS_LIST = Object.values(DATE_TYPE_OPERANDS).map(
+  ({ value }) => value
+);
+
+export const DATE_TYPE_CATEGORY = {
+  SECONDS: { value: "seconds", label: "Seconds" },
+  MINUTES: { value: "minutes", label: "Minutes" },
+  HOURS: { value: "hours", label: "Hours" },
+  DAYS: { value: "days", label: "Days" },
+  MONTHS: { value: "months", label: "Months" },
+  YEARS: { value: "years", label: "Years" },
+};
+
+export const DATE_TYPE_CATEGORY_LIST = Object.values(DATE_TYPE_CATEGORY).map(
+  ({ value }) => value
+);
+
+export const NONCONFIGURABLE_OBJECT_TYPES = ["file", "linkuser"];
+
+export const TRANSACTION_ACTIONS = {
+  NONE: { value: "", label: "None" },
+  TERMINATE: {
+    value: "terminate",
+    label: "Terminate at this step(should proceed from this step.)",
+  },
+};
+
+export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
 
 export const OBJECT_SECTIONS_BINDER_UTIL = "@@";
 export const ENDRESULT_DECORATOR_BINDER_UTIL = "⟤";
@@ -335,11 +437,6 @@ export const INVOICE_STATICS = {
     value: "invoice",
     type: "invoice",
   },
-};
-export const SERVICE_CRITERIA_CONSTS = {
-  CURRENT_DAY: "currentDay",
-  CURRENT_MONTH: "currentMonth",
-  CURRENT_YEAR: "currentYear",
 };
 
 /**
