@@ -153,9 +153,13 @@ export const NONCONFIGURABLE_OBJECT_TYPES = ["file", "linkuser"];
 
 export const TRANSACTION_ACTIONS = {
   NONE: { value: "", label: "None" },
+  ENABLE: {
+    value: "enable",
+    label: "Allow transaction to proceed from this step & department",
+  },
   TERMINATE: {
     value: "terminate",
-    label: "Terminate at this step(should proceed from this step.)",
+    label: "Terminate at this step(will not proceed to the next step & department)",
   },
 };
 
