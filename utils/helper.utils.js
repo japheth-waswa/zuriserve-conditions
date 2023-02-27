@@ -1,5 +1,6 @@
 export const CONDITIONAL_STATEMENT_OPERATORS = {
   notEmpty: "Has value",
+  isEmpty: "Has no value",
   is: "Is",
   contains: "Contains",
   lessThan: "Less Than",
@@ -69,7 +70,7 @@ export const STEP_OBJECT_VISIBILITY = {
     value: 1,
     label: "Visible",
   },
-  // INVISIBLE: { value: 2, label: "Invisible" },
+  INVISIBLE: { value: 2, label: "Invisible" },
   HIDDEN: { value: 3, label: "Hidden" },
 };
 
