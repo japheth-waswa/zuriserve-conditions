@@ -146,6 +146,12 @@ export const DATE_TYPE_CATEGORY = {
   YEARS: { value: "years", label: "Years" },
 };
 
+export const DATE_TYPE_CATEGORY_MIN = {
+  DAYS: { value: "days", label: "Days" },
+  MONTHS: { value: "months", label: "Months" },
+  YEARS: { value: "years", label: "Years" },
+};
+
 export const DATE_TYPE_CATEGORY_LIST = Object.values(DATE_TYPE_CATEGORY).map(
   ({ value }) => value
 );
@@ -160,8 +166,34 @@ export const TRANSACTION_ACTIONS = {
   },
   TERMINATE: {
     value: "terminate",
-    label: "Terminate at this step(will not proceed to the next step & department)",
+    label:
+      "Terminate at this step(will not proceed to the next step & department)",
   },
+};
+
+export const FEE_GROUP_BIND_TYPE = {
+  NONE: { value: "", label: "None" },
+  GROUP: { value: "group", label: "Group" },
+  FEE: { value: "fee", label: "Fee" },
+};
+
+export const FEE_GROUP_STATICS = {
+  NONE: { value: "", label: "None" },
+  INVOICE_NAME: { value: "name", label: "Invoice Name" },
+  INVOICE_REF: { value: "invoiceRef", label: "Invoice Ref" },
+  TOTAL_AMOUNT: { value: "totalAmount", label: "Total Amount" },
+  PENDING_AMOUNT: { value: "pendingAmount", label: "Pending Amount" },
+  PAID_AMOUNT: { value: "paidAmount", label: "Paid Amount" },
+  CREDIT_AMOUNT: { value: "creditAmount", label: "Credit Amount" },
+  INVOICE_DATE: { value: "invoiceDate", label: "Invoice Date" },
+  PAYMENT_DATE: { value: "paymentDate", label: "Payment Date" },
+};
+
+export const FEE_GROUP_FEE_STATICS = {
+  NONE: { value: "", label: "None" },
+  FEE_NAME: { value: "feeName", label: "Fee Name" },
+  FEE_AMOUNT: { value: "feeAmount", label: "Fee Amount" },
+  FEE_DATE: { value: "feeDate", label: "Fee Date" },
 };
 
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
@@ -233,6 +265,12 @@ export const INVOICE_OPENING_CLOSING_TAGS_UTIL = {
   stringVarOpeningStr: "⊞",
   stringVarClosing: /⊟/g,
   stringVarClosingStr: "⊟",
+};
+export const INVOICE_STATIC_OPENING_CLOSING_TAGS_UTIL = {
+  stringVarOpening: /⊰/g,
+  stringVarOpeningStr: "⊰",
+  stringVarClosing: /⊱/g,
+  stringVarClosingStr: "⊱",
 };
 
 export const ENDRESULT_STATICS = {
@@ -436,13 +474,13 @@ export const ENDRESULT_DECORATORS = {
     type: "date",
   },
 };
-export const INVOICE_STATICS = {
-  invoice: {
-    label: "invoice",
-    value: "invoice",
-    type: "invoice",
-  },
-};
+// export const INVOICE_STATICS = {
+//   invoice: {
+//     label: "invoice",
+//     value: "invoice",
+//     type: "invoice",
+//   },
+// };
 
 /**
  *
