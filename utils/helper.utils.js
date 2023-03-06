@@ -473,6 +473,11 @@ export const ENDRESULT_DECORATORS = {
     value: "MMMM DD, YYYY",
     type: "date",
   },
+  "number to words": {
+    label: "number to words",
+    value: "numberToWords",
+    type: "numberToWords",
+  },
 };
 // export const INVOICE_STATICS = {
 //   invoice: {
