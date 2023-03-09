@@ -18,7 +18,10 @@ import {
   processObjectConditionalResult,
 } from "./lib/object.conditions.js";
 import { processStepConditions } from "./lib/step.conditions.js";
-import { processStepConditionsV2 } from "./lib/step.conditions.v2.js";
+import {
+  processQueryList,
+  processStepConditionsV2,
+} from "./lib/step.conditions.v2.js";
 import { processTransactionData } from "./lib/transaction.data.js";
 import {
   LARGEDATASET_FIELD_OPENING_CLOSING_TAGS_UTIL,
@@ -43,6 +46,15 @@ export const OBJECTLABEL_FIELD_VALUE_OPENING_CLOSING_TAGS =
   OBJECTLABEL_FIELD_VALUE_OPENING_CLOSING_TAGS_UTIL;
 export const OBJECTLABEL_LARGEDATASET_FIELD_OPENING_CLOSING_TAGS =
   OBJECTLABEL_LARGEDATASET_FIELD_OPENING_CLOSING_TAGS_UTIL;
+
+/**
+ * Prepares query list
+ * @param {*} param0
+ * @returns {query:[]}
+ */
+export const parseQueryList = ({ queryList, objectLabelsData }) => {
+  return processQueryList({ queryList, objectLabelsData });
+};
 
 /**
  * Computes step condition(s) v2
