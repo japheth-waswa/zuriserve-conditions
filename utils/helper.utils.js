@@ -371,6 +371,16 @@ export const ENDRESULT_STATICS = {
     value: "transactionInitiatorFirstName",
     type: "transactionInitiatorFirstName",
   },
+  "transaction initiator phone": {
+    label: "transaction initiator phone",
+    value: "transactionInitiatorPhone",
+    type: "transactionInitiatorPhone",
+  },
+  "transaction initiator email": {
+    label: "transaction initiator email",
+    value: "transactionInitiatorEmail",
+    type: "transactionInitiatorEmail",
+  },
 
   "client full names": {
     label: "client full names",
@@ -381,6 +391,16 @@ export const ENDRESULT_STATICS = {
     label: "client first name",
     value: "clientFirstName",
     type: "clientFirstName",
+  },
+  "client phone": {
+    label: "client phone",
+    value: "clientPhone",
+    type: "clientPhone",
+  },
+  "client email": {
+    label: "client email",
+    value: "clientEmail",
+    type: "clientEmail",
   },
 
   "current department": {
@@ -573,6 +593,10 @@ export const interpolateStringExpressions = function ({
   } catch (e) {
     return {};
   }
+};
+
+export const containsOnlyNumbers = (str) => {
+  return /^(\d+.)*(\d+)$/.test(String(str));
 };
 
 /**
