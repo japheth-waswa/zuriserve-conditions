@@ -381,6 +381,11 @@ export const ENDRESULT_STATICS = {
     value: "transactionInitiatorEmail",
     type: "transactionInitiatorEmail",
   },
+  "transaction initiator boxoffice": {
+    label: "transaction initiator boxoffice",
+    value: "transactionInitiatorBoxOffice",
+    type: "transactionInitiatorBoxOffice",
+  },
 
   "client full names": {
     label: "client full names",
@@ -401,6 +406,11 @@ export const ENDRESULT_STATICS = {
     label: "client email",
     value: "clientEmail",
     type: "clientEmail",
+  },
+  "client boxoffice": {
+    label: "client boxoffice",
+    value: "clientBoxOffice",
+    type: "clientBoxOffice",
   },
 
   "current department": {
@@ -455,6 +465,11 @@ export const ENDRESULT_STATICS = {
     label: "file verification url",
     value: "fileVerificationURL",
     type: "fileVerificationURL",
+  },
+  "transaction verification url": {
+    label: "transaction verification url",
+    value: "transactionVerificationURL",
+    type: "transactionVerificationURL",
   },
 };
 export const ENDRESULT_DECORATORS = {
