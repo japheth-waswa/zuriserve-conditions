@@ -1,3 +1,4 @@
+import { processConditionObjectValue } from "./lib/condition.object.value.js";
 import {
   processExtractFeesWithConditionsFromFeeGroups,
   processExtractFeesWithConditionsFromSteps,
@@ -46,6 +47,15 @@ export const OBJECTLABEL_FIELD_VALUE_OPENING_CLOSING_TAGS =
   OBJECTLABEL_FIELD_VALUE_OPENING_CLOSING_TAGS_UTIL;
 export const OBJECTLABEL_LARGEDATASET_FIELD_OPENING_CLOSING_TAGS =
   OBJECTLABEL_LARGEDATASET_FIELD_OPENING_CLOSING_TAGS_UTIL;
+
+/**
+ * Returns the object's changed value if it does not contain any largedataset
+ * @param {*} param0
+ * @returns {query:[]}
+ */
+export const parseConditionObjectValue = ({ query }) => {
+  return processConditionObjectValue({ query });
+};
 
 /**
  * Prepares query list

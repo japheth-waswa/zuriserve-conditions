@@ -610,8 +610,12 @@ export const interpolateStringExpressions = function ({
   }
 };
 
+export const containsOnlyLetters = (str) => {
+  return Boolean(str.match(/^[A-Za-z]*$/));
+};
+
 export const containsOnlyNumbers = (str) => {
-  return /^(\d+.)*(\d+)$/.test(String(str));
+  return Boolean(str.match(/^[.0-9]*$/));
 };
 
 /**
