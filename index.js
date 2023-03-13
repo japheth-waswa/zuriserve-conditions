@@ -75,11 +75,17 @@ export const parseStepConditionsV2 = ({
   objectLabelsData = {},
   conditions = [],
   assignable = false,
+  withSaveDraft = false,
+  withSaveDraftObjectIds = false,
+  withSuccessObjectConditions = false,
 }) => {
   return processStepConditionsV2({
     objectLabelsData,
     conditions,
     assignable,
+    withSaveDraft,
+    withSaveDraftObjectIds,
+    withSuccessObjectConditions,
   });
 };
 
