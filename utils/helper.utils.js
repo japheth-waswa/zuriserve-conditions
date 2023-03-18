@@ -65,6 +65,22 @@ export const QUERY_BUILDER_MATCH_TYPES = {
   },
 };
 
+export const SESSION_OBJECT_SOURCES = {
+  ROOT: {
+    value: "source",
+    label: "Source",
+  },
+  TITLE: { value: "title", label: "Title" },
+};
+
+export const SESSION_OBJECT_MATCH_TYPES = {
+  TERM: {
+    value: "term",
+    label: "Term",
+  },
+  FIELD: { value: "field", label: "Field" },
+};
+
 export const STEP_OBJECT_VISIBILITY = {
   VISIBLE: {
     value: 1,
@@ -274,7 +290,6 @@ export const INVOICE_STATIC_OPENING_CLOSING_TAGS_UTIL = {
 };
 
 export const ENDRESULT_STATICS = {
-
   "transaction ref no": {
     label: "transaction ref no",
     value: "transactionRefNo",
