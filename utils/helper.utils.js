@@ -125,6 +125,7 @@ export const GLOBAL_DATA_CONSTS = {
     label: "Start of current year",
   },
   CURRENT_YEAR_END: { value: "currentYearEnd", label: "End of current year" },
+  TRANSACTION_REF_NO: { value: "transactionRefNo", label: "Transaction ref no" },
 };
 
 export const GLOBAL_CONSTS_LIST = Object.values(GLOBAL_DATA_CONSTS).map(

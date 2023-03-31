@@ -62,8 +62,12 @@ export const parseConditionObjectValue = ({ query }) => {
  * @param {*} param0
  * @returns {query:[]}
  */
-export const parseQueryList = ({ queryList, objectLabelsData }) => {
-  return processQueryList({ queryList, objectLabelsData });
+export const parseQueryList = ({
+  queryList,
+  objectLabelsData,
+  transaction = {},
+}) => {
+  return processQueryList({ queryList, objectLabelsData, transaction });
 };
 
 /**
