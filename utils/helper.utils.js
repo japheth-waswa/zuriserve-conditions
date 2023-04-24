@@ -125,7 +125,10 @@ export const GLOBAL_DATA_CONSTS = {
     label: "Start of current year",
   },
   CURRENT_YEAR_END: { value: "currentYearEnd", label: "End of current year" },
-  TRANSACTION_REF_NO: { value: "transactionRefNo", label: "Transaction ref no" },
+  TRANSACTION_REF_NO: {
+    value: "transactionRefNo",
+    label: "Transaction ref no",
+  },
 };
 
 export const GLOBAL_CONSTS_LIST = Object.values(GLOBAL_DATA_CONSTS).map(
@@ -211,6 +214,29 @@ export const FEE_GROUP_FEE_STATICS = {
   FEE_NAME: { value: "feeName", label: "Fee Name" },
   FEE_AMOUNT: { value: "feeAmount", label: "Fee Amount" },
   FEE_DATE: { value: "feeDate", label: "Fee Date" },
+};
+
+export const MAP_TYPES = {
+  POSITION: { value: "position", label: "Select position on the map" },
+  DRAW: { value: "draw", label: "Draw shapes on the map" },
+};
+
+export const API_PAYLOAD_TYPES = {
+  SCHEDULE: { value: "schedule", label: "Schedule" },
+  API_ROUTE: { value: "apiRoute", label: "Api Route" },
+};
+
+export const API_DATA_STRUCTURE_TYPES = {
+  CUSTOM: { value: "custom", label: "Custom" },
+  STRING: { value: "string", label: "String" },
+  NUMBER: { value: "number", label: "Number" },
+  PLAIN_OBJECT: { value: "plainObject", label: "Plain Object" },
+  ARRAY: { value: "array", label: "Array" },
+};
+
+export const API_COLLECTION_MAP_TYPES = {
+  COLLECTION_FIELD: { value: "collectionField", label: "Collection Field" },
+  CUSTOM: { value: "custom", label: "Custom" },
 };
 
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
