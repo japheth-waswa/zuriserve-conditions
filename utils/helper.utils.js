@@ -239,6 +239,13 @@ export const API_COLLECTION_MAP_TYPES = {
   CUSTOM: { value: "custom", label: "Custom" },
 };
 
+export const REQUEST_METHODS = {
+  GET: { value: "get", label: "Get" },
+  POST: { value: "post", label: "Post" },
+  PATCH: { value: "patch", label: "Patch" },
+  DELETE: { value: "delete", label: "Delete" },
+};
+
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
 
 export const OBJECT_SECTIONS_BINDER_UTIL = "@@";
