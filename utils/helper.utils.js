@@ -246,6 +246,16 @@ export const REQUEST_METHODS = {
   DELETE: { value: "delete", label: "Delete" },
 };
 
+export const REQUEST_DATA_PAYLOAD_TYPES = {
+  ACCESS_TOKEN: { value: "accessToken", label: "Access Token" },
+  CUSTOM: { value: "custom", label: "Custom" },
+};
+
+export const API_AUTH_TYPES = {
+  ACCESS_TOKEN: { value: "accessToken", label: "Access Token" },
+  BASIC_AUTH: { value: "basicAuth", label: "Basic Auth" },
+};
+
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
 
 export const OBJECT_SECTIONS_BINDER_UTIL = "@@";
