@@ -256,6 +256,21 @@ export const API_AUTH_TYPES = {
   BASIC_AUTH: { value: "basicAuth", label: "Basic Auth" },
 };
 
+export const API_DATA_TYPE = {
+  INPUT: { value: "input", label: "Input" },
+  OUTPUT: { value: "output", label: "Output" },
+};
+
+export const API_COLLECTION_INPUT_MAP_TYPES = {
+  DATASTRUCTURE_FIELD: {
+    value: "dataStructureField",
+    label: "Data Structure Field",
+  },
+  CUSTOM: { value: "custom", label: "Custom" },
+};
+
+export const OBJECT_API_TYPE = { INPUT: "input", OUTPUT: "output" };
+
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
 
 export const OBJECT_SECTIONS_BINDER_UTIL = "@@";
@@ -331,6 +346,13 @@ export const INVOICE_STATIC_OPENING_CLOSING_TAGS_UTIL = {
   stringVarOpeningStr: "⊰",
   stringVarClosing: /⊱/g,
   stringVarClosingStr: "⊱",
+};
+
+export const API_OBJECT_QUERY_OPENING_CLOSING_TAGS_UTIL = {
+  stringVarOpening: /<<<!/g,
+  stringVarOpeningStr: "<<<!",
+  stringVarClosing: /!>>>/g,
+  stringVarClosingStr: "!>>>",
 };
 
 export const ENDRESULT_STATICS = {
