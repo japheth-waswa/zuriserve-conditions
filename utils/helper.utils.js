@@ -269,7 +269,15 @@ export const API_COLLECTION_INPUT_MAP_TYPES = {
   CUSTOM: { value: "custom", label: "Custom" },
 };
 
-export const OBJECT_API_TYPE = { INPUT: "input", OUTPUT: "output" };
+export const CLIENT_TYPES = {
+  BACKOFFICE: {
+    value: "backoffice",
+    label: "Backoffice",
+  },
+  CLIENT: { value: "client", label: "Client" },
+};
+
+// export const OBJECT_API_TYPE = { INPUT: "input", OUTPUT: "output" };
 
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
 
