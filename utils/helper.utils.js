@@ -277,6 +277,23 @@ export const CLIENT_TYPES = {
   CLIENT: { value: "client", label: "Client" },
 };
 
+export const API_ASSIGNMENT_TYPE = {
+  REPLACE: {
+    value: "replace",
+    label: "Replace",
+  },
+  APPEND: { value: "append", label: "Append" },
+};
+
+export const API_SECTION_TYPES = {
+  HEADER: {
+    value: "header",
+    label: "Header",
+  },
+  BODY: { value: "body",
+  label: "Body", },
+};
+
 // export const OBJECT_API_TYPE = { INPUT: "input", OUTPUT: "output" };
 
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
