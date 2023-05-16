@@ -380,6 +380,13 @@ export const API_OBJECT_QUERY_OPENING_CLOSING_TAGS_UTIL = {
   stringVarClosingStr: "!>>>",
 };
 
+export const QUERY_OBJECT_OPENING_CLOSING_TAGS_UTIL = {
+  stringVarOpening: /⫪/g,
+  stringVarOpeningStr: "⫪",
+  stringVarClosing: /⫫/g,
+  stringVarClosingStr: "⫫",
+};
+
 export const ENDRESULT_STATICS = {
   "transaction ref no": {
     label: "transaction ref no",
