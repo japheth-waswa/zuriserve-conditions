@@ -40,7 +40,15 @@ export const QUERY_BUILDER_OPERANDS = {
   },
   LTE: {
     value: "lte",
-    label: "Less than or equal to ",
+    label: "Less than or equal to",
+  },
+  IN: {
+    value: "in",
+    label: "In",
+  },
+  NOT_IN: {
+    value: "nin",
+    label: "Not in",
   },
 };
 
