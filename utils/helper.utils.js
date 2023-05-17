@@ -302,6 +302,14 @@ export const API_SECTION_TYPES = {
   label: "Body", },
 };
 
+export const CONDITIONAL_STATEMENT_VALUE_TYPE = {
+  VALUE: {
+    value: "value",
+    label: "Value",
+  },
+  STEP_OBJECT: { value: "stepObject", label: "Step Object" },
+};
+
 // export const OBJECT_API_TYPE = { INPUT: "input", OUTPUT: "output" };
 
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
