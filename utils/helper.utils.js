@@ -586,6 +586,11 @@ export const ENDRESULT_DECORATORS = {
     value: "numberToWords",
     type: "numberToWords",
   },
+  "number format with comma": {
+    label: "number format with comma",
+    value: "numberFormatWithComma",
+    type: "numberFormatWithComma",
+  },
 };
 // export const INVOICE_STATICS = {
 //   invoice: {
