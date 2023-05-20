@@ -310,6 +310,14 @@ export const CONDITIONAL_STATEMENT_VALUE_TYPE = {
   STEP_OBJECT: { value: "stepObject", label: "Step Object" },
 };
 
+export const QUERY_OBJECT_FIELD_VALUE_DECORATOR = {
+  START_OF_DAY: {
+    value: "startOfDay",
+    label: "Start of Day",
+  },
+  END_OF_DAY: { value: "endOfDay", label: "End of Day" },
+};
+
 // export const OBJECT_API_TYPE = { INPUT: "input", OUTPUT: "output" };
 
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";

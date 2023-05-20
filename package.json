@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "zuriserve-conditions",
-  "version": "1.0.45",
+  "version": "1.0.46",
   "description": "zuriserve conditions",
   "main": "index.js",
   "scripts": {
