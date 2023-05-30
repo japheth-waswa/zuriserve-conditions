@@ -606,6 +606,11 @@ export const ENDRESULT_DECORATORS = {
     value: "removeAllSpaces",
     type: "removeAllSpaces",
   },
+  "trim": {
+    label: "trim",
+    value: "trim",
+    type: "trim",
+  },
   "encode to base64": {
     label: "encode to base64",
     value: "encodeToBase64",
