@@ -434,6 +434,11 @@ export const ENDRESULT_STATICS = {
     type: "transactionCompletionDate",
   },
 
+  "transaction initiator username": {
+    label: "transaction initiator username",
+    value: "transactionInitiatorUsername",
+    type: "transactionInitiatorUsername",
+  },
   "transaction initiator full names": {
     label: "transaction initiator full names",
     value: "transactionInitiatorFullNames",
@@ -460,6 +465,11 @@ export const ENDRESULT_STATICS = {
     type: "transactionInitiatorBoxOffice",
   },
 
+  "client username": {
+    label: "client username",
+    value: "clientUsername",
+    type: "clientUsername",
+  },
   "client full names": {
     label: "client full names",
     value: "clientFullNames",
@@ -590,6 +600,21 @@ export const ENDRESULT_DECORATORS = {
     label: "number format with comma",
     value: "numberFormatWithComma",
     type: "numberFormatWithComma",
+  },
+  "remove all spaces": {
+    label: "remove all spaces",
+    value: "removeAllSpaces",
+    type: "removeAllSpaces",
+  },
+  "encode to base64": {
+    label: "encode to base64",
+    value: "encodeToBase64",
+    type: "encodeToBase64",
+  },
+  "decode from base64": {
+    label: "decode from base64",
+    value: "decodeFromBase64",
+    type: "decodeFromBase64",
   },
 };
 // export const INVOICE_STATICS = {
