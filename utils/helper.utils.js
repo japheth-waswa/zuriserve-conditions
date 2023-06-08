@@ -318,6 +318,14 @@ export const QUERY_OBJECT_FIELD_VALUE_DECORATOR = {
   END_OF_DAY: { value: "endOfDay", label: "End of Day" },
 };
 
+export const DB_FIELD_ACTION = {
+  ADD_TO_ARRAY: {
+    value: "addToArray",
+    label: "Add To Array",
+  },
+  REMOVE_FROM_ARRAY: { value: "removeFromArray", label: "Remove From Array" },
+};
+
 // export const OBJECT_API_TYPE = { INPUT: "input", OUTPUT: "output" };
 
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
