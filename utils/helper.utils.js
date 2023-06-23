@@ -298,8 +298,7 @@ export const API_SECTION_TYPES = {
     value: "header",
     label: "Header",
   },
-  BODY: { value: "body",
-  label: "Body", },
+  BODY: { value: "body", label: "Body" },
 };
 
 export const CONDITIONAL_STATEMENT_VALUE_TYPE = {
@@ -324,6 +323,32 @@ export const DB_FIELD_ACTION = {
     label: "Add To Array",
   },
   REMOVE_FROM_ARRAY: { value: "removeFromArray", label: "Remove From Array" },
+};
+
+export const BUILD_IMAGE_TYPES = {
+  NO_IMAGE_INITIATOR: {
+    value: "noImageInitiator",
+    label: "No Image Initiator",
+  },
+  IMAGE_INITIATOR: { value: "imageInitiator", label: "Image Initiator" },
+};
+
+export const BUILD_IMAGE_FONT_FAMILY = {
+  ARIAL: {
+    value: "Arial",
+    label: "Arial",
+    default: true,
+  },
+  ARIAL_SANS: {
+    value: "Arial, Sans",
+    label: "Arial, Sans",
+    default: true,
+  },
+  COMIC_SANS_MS: {
+    value: "Comic Sans MS",
+    label: "Comic Sans MS",
+    default: true,
+  },
 };
 
 // export const OBJECT_API_TYPE = { INPUT: "input", OUTPUT: "output" };
@@ -417,6 +442,13 @@ export const QUERY_OBJECT_OPENING_CLOSING_TAGS_UTIL = {
   stringVarOpeningStr: "⫪",
   stringVarClosing: /⫫/g,
   stringVarClosingStr: "⫫",
+};
+
+export const IMAGE_BUILDER_OPENING_CLOSING_TAGS_UTIL = {
+  stringVarOpening: /⟖/g,
+  stringVarOpeningStr: "⟖",
+  stringVarClosing: /⟗/g,
+  stringVarClosingStr: "⟗",
 };
 
 export const ENDRESULT_STATICS = {
@@ -614,7 +646,7 @@ export const ENDRESULT_DECORATORS = {
     value: "removeAllSpaces",
     type: "removeAllSpaces",
   },
-  "trim": {
+  trim: {
     label: "trim",
     value: "trim",
     type: "trim",
