@@ -351,6 +351,47 @@ export const BUILD_IMAGE_FONT_FAMILY = {
   },
 };
 
+export const PDF_PAGE_SIZE = {
+  A4: {
+    value: "A4",
+    label: "A4",
+  },
+  A3: {
+    value: "A3",
+    label: "A3",
+  },
+  A5: {
+    value: "A5",
+    label: "A5",
+  },
+  A2: {
+    value: "A2",
+    label: "A2",
+  },
+};
+
+export const PDF_PAGE_ORIENTATION = {
+  PORTRAIT: {
+    value: "portrait",
+    label: "Portrait",
+  },
+  LANDSCAPE: {
+    value: "landscape",
+    label: "Landscape",
+  },
+};
+
+export const PDF_BG_IMAGE_REPEAT = {
+  REPEAT: {
+    value: "repeat",
+    label: "Repeat",
+  },
+  NO_REPEAT: {
+    value: "no-repeat",
+    label: "No Repeat",
+  },
+};
+
 // export const OBJECT_API_TYPE = { INPUT: "input", OUTPUT: "output" };
 
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
