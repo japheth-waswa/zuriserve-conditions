@@ -672,6 +672,16 @@ export const ENDRESULT_DECORATORS = {
     value: "MMMM DD, YYYY",
     type: "date",
   },
+  "date format:- 19.7.18": {
+    label: "date format:- 19.7.18",
+    value: "D.M.YY",
+    type: "date",
+  },
+  "date format:- 19.07.18": {
+    label: "date format:- 19.07.18",
+    value: "DD.MM.YY",
+    type: "date",
+  },
   "number to words": {
     label: "number to words",
     value: "numberToWords",
