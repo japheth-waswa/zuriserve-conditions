@@ -227,6 +227,7 @@ export const FEE_GROUP_FEE_STATICS = {
 export const MAP_TYPES = {
   POSITION: { value: "position", label: "Select position on the map" },
   DRAW: { value: "draw", label: "Draw shapes on the map" },
+  CURRENT_LOCATION: { value: "currentLocation", label: "Choose current Location" },
 };
 
 export const API_PAYLOAD_TYPES = {
