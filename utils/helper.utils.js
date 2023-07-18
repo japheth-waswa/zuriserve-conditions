@@ -227,7 +227,10 @@ export const FEE_GROUP_FEE_STATICS = {
 export const MAP_TYPES = {
   POSITION: { value: "position", label: "Select position on the map" },
   DRAW: { value: "draw", label: "Draw shapes on the map" },
-  CURRENT_LOCATION: { value: "currentLocation", label: "Choose current Location" },
+  CURRENT_LOCATION: {
+    value: "currentLocation",
+    label: "Choose current Location",
+  },
 };
 
 export const API_PAYLOAD_TYPES = {
@@ -390,6 +393,17 @@ export const PDF_BG_IMAGE_REPEAT = {
   NO_REPEAT: {
     value: "no-repeat",
     label: "No Repeat",
+  },
+};
+
+export const MAP_POSITION = {
+  LATITUDE: {
+    value: "latitude",
+    label: "Latitude",
+  },
+  LONGITUDE: {
+    value: "longitude",
+    label: "Longitude",
   },
 };
 
