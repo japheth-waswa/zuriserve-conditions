@@ -407,6 +407,17 @@ export const MAP_POSITION = {
   },
 };
 
+export const EDMS_OBJECT_TARGET = {
+  DIR: {
+    value: "dir",
+    label: "Dir",
+  },
+  FILE: {
+    value: "file",
+    label: "File",
+  },
+};
+
 // export const OBJECT_API_TYPE = { INPUT: "input", OUTPUT: "output" };
 
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
