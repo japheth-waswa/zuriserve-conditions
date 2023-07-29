@@ -1,3 +1,5 @@
+import lodash from "lodash";
+
 export const CONDITIONAL_STATEMENT_OPERATORS = {
   notEmpty: "Has value",
   isEmpty: "Has no value",
@@ -746,6 +748,21 @@ export const ENDRESULT_DECORATORS = {
 //     type: "invoice",
 //   },
 // };
+
+/**
+ *
+ * @param {*} param0
+ * @returns String
+ */
+export const largedatasetFieldBinding = ({ fieldsData = {} }) => {
+  if (lodash.isEmpty(fieldsData)) return "";
+
+  let dataList = [];
+  for (const fieldName of Object.keys(fieldsData)) {
+    dataList = [...dataList, `${fieldName}:- ${fieldsData[fieldName]}`];
+  }
+  return dataList.join(config.largedataset.fieldNameSeparator);
+};
 
 /**
  *
