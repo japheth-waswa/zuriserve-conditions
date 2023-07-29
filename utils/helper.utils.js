@@ -759,7 +759,8 @@ export const largedatasetFieldBinding = ({ fieldsData = {} }) => {
 
   let dataList = [];
   for (const fieldName of Object.keys(fieldsData)) {
-    dataList = [...dataList, `${fieldName}:- ${fieldsData[fieldName]}`];
+    // dataList = [...dataList, `${fieldName}:- ${fieldsData[fieldName]}`];
+    dataList = [...dataList, fieldsData[fieldName]];
   }
   return dataList.join(" | ");
 };
