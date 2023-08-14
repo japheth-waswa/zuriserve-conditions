@@ -217,6 +217,7 @@ export const FEE_GROUP_STATICS = {
   CREDIT_AMOUNT: { value: "creditAmount", label: "Credit Amount" },
   INVOICE_DATE: { value: "invoiceDate", label: "Invoice Date" },
   PAYMENT_DATE: { value: "paymentDate", label: "Payment Date" },
+  PAYMENT_MODES: { value: "paymentModes", label: "Payment Modes" },
 };
 
 export const FEE_GROUP_FEE_STATICS = {
