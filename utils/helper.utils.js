@@ -421,6 +421,25 @@ export const EDMS_OBJECT_TARGET = {
   },
 };
 
+export const EDMS_ACCESS_TYPES = {
+  FILE: {
+    value: "file",
+    label: "File",
+  },
+  DIR: {
+    value: "dir",
+    label: "Dir",
+  },
+  OBJECT: {
+    value: "object",
+    label: "Object",
+  },
+  DATA: {
+    value: "data",
+    label: "Data",
+  },
+};
+
 export const EDMS_ACCESS_RIGHTS = {
   MODIFY_ACCESS_RIGHTS: {
     value: "modifyAccessRights",
