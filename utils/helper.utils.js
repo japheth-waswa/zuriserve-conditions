@@ -421,6 +421,53 @@ export const EDMS_OBJECT_TARGET = {
   },
 };
 
+export const EDMS_ACCESS_RIGHTS = {
+  MODIFY_ACCESS_RIGHTS: {
+    value: "modifyAccessRights",
+    label: "Modify Access Rights",
+  },
+  ADD_METADATA_OBJECTS: {
+    value: "addMetadataObjects",
+    label: "Add metadata objects",
+  },
+  MODIFY_METADATA_OBJECTS: {
+    value: "modifyMetadataObjects",
+    label: "Modify metadata objects",
+  },
+  DELETE_METADATA_OBJECTS: {
+    value: "deleteMetadataObjects",
+    label: "Delete metadata objects",
+  },
+
+  PUBLIC_VIEW_FILE: { value: "publicViewFile", label: "Public View File" },
+  VIEW_FILE: { value: "viewFile", label: "View File" },
+  MODIFY_FILE: { value: "modifyFile", label: "Modify/Version File" },
+  RENAME_FILE: { value: "renameFile", label: "Rename File" },
+  DELETE_FILE: { value: "deleteFile", label: "Delete File" },
+  VIEW_FILE_METADATA: {
+    value: "viewFileMetadata",
+    label: "View File Metadata",
+  },
+  MODIFY_FILE_METADATA: {
+    value: "modifyFileMetadata",
+    label: "Modify File Metadata",
+  },
+
+  PUBLIC_VIEW_DIR: { value: "publicViewDir", label: "Public View Dir" },
+  VIEW_DIR: { value: "viewDir", label: "View Dir" },
+  MODIFY_DIR: { value: "modifyDir", label: "Modify/Version Dir" },
+  RENAME_DIR: { value: "renameDir", label: "Rename Dir" },
+  DELETE_DIR: { value: "deleteDir", label: "Delete Dir" },
+  VIEW_DIR_METADATA: {
+    value: "viewDirMetadata",
+    label: "View Dir Metadata",
+  },
+  MODIFY_DIR_METADATA: {
+    value: "modifyDirMetadata",
+    label: "Modify Dir Metadata",
+  },
+};
+
 // export const OBJECT_API_TYPE = { INPUT: "input", OUTPUT: "output" };
 
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
