@@ -460,7 +460,8 @@ export const EDMS_ACCESS_RIGHTS = {
 
   PUBLIC_VIEW_FILE: { value: "publicViewFile", label: "Public View File" },
   VIEW_FILE: { value: "viewFile", label: "View File" },
-  MODIFY_FILE: { value: "modifyFile", label: "Modify/Version File" },
+  UPLOAD_FILE: { value: "modifyFile", label: "Upload File" },
+  VERSION_FILE: { value: "modifyFile", label: "Version File" },
   RENAME_FILE: { value: "renameFile", label: "Rename File" },
   DELETE_FILE: { value: "deleteFile", label: "Delete File" },
   VIEW_FILE_METADATA: {
@@ -474,7 +475,7 @@ export const EDMS_ACCESS_RIGHTS = {
 
   PUBLIC_VIEW_DIR: { value: "publicViewDir", label: "Public View Dir" },
   VIEW_DIR: { value: "viewDir", label: "View Dir" },
-  MODIFY_DIR: { value: "modifyDir", label: "Modify/Version Dir" },
+  MODIFY_DIR: { value: "modifyDir", label: "Modify Dir" },
   RENAME_DIR: { value: "renameDir", label: "Rename Dir" },
   DELETE_DIR: { value: "deleteDir", label: "Delete Dir" },
   VIEW_DIR_METADATA: {
