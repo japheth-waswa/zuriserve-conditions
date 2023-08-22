@@ -460,8 +460,8 @@ export const EDMS_ACCESS_RIGHTS = {
 
   PUBLIC_VIEW_FILE: { value: "publicViewFile", label: "Public View File" },
   VIEW_FILE: { value: "viewFile", label: "View File" },
-  UPLOAD_FILE: { value: "modifyFile", label: "Upload File" },
-  VERSION_FILE: { value: "modifyFile", label: "Version File" },
+  UPLOAD_FILE: { value: "uploadFile", label: "Upload File" },
+  VERSION_FILE: { value: "versionFile", label: "Version File" },
   RENAME_FILE: { value: "renameFile", label: "Rename File" },
   DELETE_FILE: { value: "deleteFile", label: "Delete File" },
   VIEW_FILE_METADATA: {
