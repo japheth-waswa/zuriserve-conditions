@@ -458,7 +458,7 @@ export const EDMS_ACCESS_RIGHTS = {
     label: "Delete metadata objects",
   },
 
-  PUBLIC_VIEW_FILE: { value: "publicViewFile", label: "Public View File" },
+  // PUBLIC_VIEW_FILE: { value: "publicViewFile", label: "Public View File" },
   VIEW_FILE: { value: "viewFile", label: "View File" },
   UPLOAD_FILE: { value: "uploadFile", label: "Upload File" },
   VERSION_FILE: { value: "versionFile", label: "Version File" },
@@ -473,7 +473,7 @@ export const EDMS_ACCESS_RIGHTS = {
     label: "Modify File Metadata",
   },
 
-  PUBLIC_VIEW_DIR: { value: "publicViewDir", label: "Public View Dir" },
+  // PUBLIC_VIEW_DIR: { value: "publicViewDir", label: "Public View Dir" },
   VIEW_DIR: { value: "viewDir", label: "View Dir" },
   MODIFY_DIR: { value: "modifyDir", label: "Modify Dir" },
   RENAME_DIR: { value: "renameDir", label: "Rename Dir" },
@@ -490,14 +490,14 @@ export const EDMS_ACCESS_RIGHTS = {
 
 export const EDMS_ACCESS_TYPE_RIGHTS = {
   [EDMS_ACCESS_TYPES.DIR.value]: [
-    EDMS_ACCESS_RIGHTS.PUBLIC_VIEW_DIR,
+    // EDMS_ACCESS_RIGHTS.PUBLIC_VIEW_DIR,
     EDMS_ACCESS_RIGHTS.VIEW_DIR,
     EDMS_ACCESS_RIGHTS.MODIFY_DIR,
     EDMS_ACCESS_RIGHTS.RENAME_DIR,
     EDMS_ACCESS_RIGHTS.DELETE_DIR,
   ],
   [EDMS_ACCESS_TYPES.FILE.value]: [
-    EDMS_ACCESS_RIGHTS.PUBLIC_VIEW_FILE,
+    // EDMS_ACCESS_RIGHTS.PUBLIC_VIEW_FILE,
     EDMS_ACCESS_RIGHTS.VIEW_FILE,
     EDMS_ACCESS_RIGHTS.UPLOAD_FILE,
     EDMS_ACCESS_RIGHTS.VERSION_FILE,
@@ -518,6 +518,8 @@ export const EDMS_ACCESS_TYPE_RIGHTS = {
     EDMS_ACCESS_RIGHTS.MODIFY_ACCESS_RIGHTS,
     EDMS_ACCESS_RIGHTS.VIEW_DIR_METADATA,
     EDMS_ACCESS_RIGHTS.MODIFY_DIR_METADATA,
+    EDMS_ACCESS_RIGHTS.VIEW_FILE_METADATA,
+    EDMS_ACCESS_RIGHTS.MODIFY_FILE_METADATA,
   ],
 };
 
