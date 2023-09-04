@@ -464,6 +464,10 @@ export const EDMS_ACCESS_RIGHTS = {
   VERSION_FILE: { value: "versionFile", label: "Version File" },
   RENAME_FILE: { value: "renameFile", label: "Rename File" },
   DELETE_FILE: { value: "deleteFile", label: "Delete File" },
+  RESTORE_DELETED_FILE: {
+    value: "restoreDeletedFile",
+    label: "Restore Deleted File",
+  },
   VIEW_FILE_METADATA: {
     value: "viewFileMetadata",
     label: "View File Metadata",
@@ -478,6 +482,10 @@ export const EDMS_ACCESS_RIGHTS = {
   MODIFY_DIR: { value: "modifyDir", label: "Modify Dir" },
   RENAME_DIR: { value: "renameDir", label: "Rename Dir" },
   DELETE_DIR: { value: "deleteDir", label: "Delete Dir" },
+  RESTORE_DELETED_DIR: {
+    value: "restoreDeletedDir",
+    label: "Restore Deleted Dir",
+  },
   VIEW_DIR_METADATA: {
     value: "viewDirMetadata",
     label: "View Dir Metadata",
@@ -495,6 +503,7 @@ export const EDMS_ACCESS_TYPE_RIGHTS = {
     EDMS_ACCESS_RIGHTS.MODIFY_DIR,
     EDMS_ACCESS_RIGHTS.RENAME_DIR,
     EDMS_ACCESS_RIGHTS.DELETE_DIR,
+    EDMS_ACCESS_RIGHTS.RESTORE_DELETED_DIR,
   ],
   [EDMS_ACCESS_TYPES.FILE.value]: [
     // EDMS_ACCESS_RIGHTS.PUBLIC_VIEW_FILE,
@@ -503,6 +512,7 @@ export const EDMS_ACCESS_TYPE_RIGHTS = {
     EDMS_ACCESS_RIGHTS.VERSION_FILE,
     EDMS_ACCESS_RIGHTS.RENAME_FILE,
     EDMS_ACCESS_RIGHTS.DELETE_FILE,
+    EDMS_ACCESS_RIGHTS.RESTORE_DELETED_FILE,
   ],
   [EDMS_ACCESS_TYPES.OBJECT.value]: [
     EDMS_ACCESS_RIGHTS.ADD_METADATA_OBJECTS,
