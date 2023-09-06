@@ -966,12 +966,43 @@ export const interpolateStringExpressions = function ({
   }
 };
 
-export const containsOnlyLetters = (str) => {
-  return Boolean(str.match(/^[A-Za-z]*$/));
+/**
+ * Append dot notation data to object.
+ * @param {*} param0
+ * @returns {}
+ */
+export const dotNotationToObjectValue = ({
+  dotNotationKey,
+  dotNotationValue,
+  initialObject = {},
+}) => {
+  const parsedObject = lodash.set({}, dotNotationKey, dotNotationValue);
+  return lodash.merge(initialObject, parsedObject);
 };
 
+/**
+ * Carmel case to spaced text string
+ * @param {*} str
+ * @returns String
+ */
+export const fromCarmelCase = (str) => String(str).replace(/([A-Z])/g, " $1");
+
+/**
+ * Checks if string contains only letters
+ * @param {*} str
+ * @returns false | true
+ */
+export const containsOnlyLetters = (str) => {
+  return Boolean(String(str).match(/^[A-Za-z]*$/));
+};
+
+/**
+ * Checks whether string is numeric
+ * @param {*} str
+ * @returns false | true
+ */
 export const containsOnlyNumbers = (str) => {
-  return Boolean(str.match(/^[.0-9]*$/));
+  return Boolean(String(str).match(/^[.0-9]*$/));
 };
 
 /**
