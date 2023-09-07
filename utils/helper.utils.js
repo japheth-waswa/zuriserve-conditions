@@ -533,6 +533,89 @@ export const EDMS_ACCESS_TYPE_RIGHTS = {
   ],
 };
 
+export const SYSTEM_WIDE_SETTINGS = {
+  SETTINGS_MODULE: "settingsModule.status",
+
+  USER_MODULE: "userModule.status",
+  USER_MODULE_READ: "userModule.read.status",
+  USER_MODULE_WRITE: "userModule.write.status",
+  USER_MODULE_DELETE: "userModule.delete.status",
+  USER_MODULE_LOGIN: "userModule.login.status",
+
+  OBJECT_MODULE: "objectsModule.status",
+  OBJECT_MODULE_READ: "objectsModule.read.status",
+  OBJECT_MODULE_WRITE: "objectsModule.write.status",
+  OBJECT_MODULE_DELETE: "objectsModule.delete.status",
+
+  DEPARTMENT_MODULE: "departmentsModule.status",
+  DEPARTMENT_MODULE_READ: "departmentsModule.read.status",
+  DEPARTMENT_MODULE_WRITE: "departmentsModule.write.status",
+  DEPARTMENT_MODULE_DELETE: "departmentsModule.delete.status",
+
+  MESSAGE_MODULE: "messagesModule.status",
+  MESSAGE_MODULE_READ: "messagesModule.read.status",
+  MESSAGE_MODULE_WRITE: "messagesModule.write.status",
+  MESSAGE_MODULE_DELETE: "messagesModule.delete.status",
+
+  DESIGN_MODULE: "designsModule.status",
+  DESIGN_MODULE_READ: "designsModule.read.status",
+  DESIGN_MODULE_WRITE: "designsModule.write.status",
+  DESIGN_MODULE_DELETE: "designsModule.delete.status",
+
+  WORKFLOW_MODULE: "workflowModule.status",
+  WORKFLOW_MODULE_MAX_WORKFLOWS: "workflowModule.maxWorkflows",
+  WORKFLOW_MODULE_SERVICE_CREATE:
+    "workflowModule.services.createService.status",
+  WORKFLOW_MODULE_SERVICE_MODIFY:
+    "workflowModule.services.modifyService.status",
+  WORKFLOW_MODULE_SERVICE_DELETE:
+    "workflowModule.services.deleteService.status",
+  WORKFLOW_MODULE_SERVICE_DEPARTMENTS:
+    "workflowModule.services.serviceDepartments.status",
+  WORKFLOW_MODULE_SERVICE_FEES: "workflowModule.services.serviceFees.status",
+  WORKFLOW_MODULE_SERVICE_STEPS: "workflowModule.services.serviceSteps.status",
+  WORKFLOW_MODULE_SERVICE_STEP_OBJECTS:
+    "workflowModule.services.stepObjects.status",
+  WORKFLOW_MODULE_SERVICE_ENDRESULT:
+    "workflowModule.services.serviceEndresult.status",
+  WORKFLOW_MODULE_INITIATE_TRANSACTION:
+    "workflowModule.services.initiateTransaction.status",
+  WORKFLOW_MODULE_SERVICE_TRANSITION:
+    "workflowModule.services.serviceTransition.status",
+
+  PAYMENT_MODULE: "paymentModule.status",
+  ANALYTICS_MODULE: "analyticsModule.status",
+  ANALYTICS_MODULE_SETTINGS: "analyticsModule.settings.status",
+
+  DATASET_MODULE: "datasetModule.status",
+  DATASET_MODULE_READ: "datasetModule.read.status",
+  DATASET_MODULE_WRITE: "datasetModule.write.status",
+  DATASET_MODULE_DELETE: "datasetModule.delete.status",
+  DATASET_MODULE_UPLOAD_DATA: "datasetModule.uploadData.status",
+  DATASET_MODULE_CONFIGURE_PERMUTATION:
+    "datasetModule.configurePermutation.status",
+  DATASET_MODULE_CONFIGURE_OFFICER_ACCESS:
+    "datasetModule.configureOfficerAccess.status",
+
+  EDMS_MODULE: "edmsModule.status",
+  CLIENT_SESSION_MODULE: "clientSessionMenuModule.status",
+};
+
+export const SYSTEM_WIDE_SETTING_ACTIONS = {
+  EQUALS: { value: "equals", label: "EqualS" },
+  NOT_EQUAL: { value: "notEquals", label: "Not Equals" },
+  GREATER_THAN: { value: "greaterThan", label: "Greater Than" },
+  GREATER_THAN_OR_EQUALS_TO: {
+    value: "greateThanOrEqualTo",
+    label: "Greater Than Or Equals To",
+  },
+  LESS_THAN: { value: "lessThan", label: "Less Than" },
+  LESS_THAN_OR_EQUALS_TO: {
+    value: "lessThanOrEqualsTo",
+    label: "Less Than Or Equals To",
+  },
+};
+
 // export const OBJECT_API_TYPE = { INPUT: "input", OUTPUT: "output" };
 
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
@@ -964,6 +1047,123 @@ export const interpolateStringExpressions = function ({
   } catch (e) {
     return {};
   }
+};
+
+/**
+ * Check if module(s) meets the criteria
+ * @required {*} settings
+ * @required {*} modules [
+                            {
+                                module: "e.y.z",
+                                value: "abc",
+                                action:
+                                "equals | notEqual | greaterThan | greateThanOrEqualTo | lessThan  | lessThanOrEqualTo",
+                            },
+                        ]
+ * @optional {*} any determines whether if any of the modules returns true or all must return true.
+ */
+export const validateModuleAccess = ({
+  settings = {},
+  modules = [],
+  any = true,
+  isSuper = false,
+}) => {
+  if (isSuper) return true; //is super admin just allow
+
+  const actionsList = Object.values(SYSTEM_WIDE_SETTING_ACTIONS).map(
+    ({ value }) => value
+  );
+
+  let boolVals = [];
+  for (const { module, action, value } of modules) {
+    //ensure action is valid
+    if (actionsList.indexOf(action) === -1) {
+      //   falseyValue = false;
+      boolVals = [...boolVals, false];
+      continue;
+    }
+
+    const settingsValue = extractNestedKeyValueDotNotation({
+      obj: { ...settings },
+      dotNotationPath: module,
+    });
+
+    if (lodash.isUndefined(settingsValue)) {
+      //   falseyValue = false;
+      boolVals = [...boolVals, false];
+      continue;
+    }
+
+    //check if its meets the crietria
+
+    if (action === SYSTEM_WIDE_SETTING_ACTIONS.EQUALS.value) {
+      boolVals = [...boolVals, value === settingsValue];
+    } else if (action === SYSTEM_WIDE_SETTING_ACTIONS.NOT_EQUAL.value) {
+      boolVals = [...boolVals, value !== settingsValue];
+    } else if (action === SYSTEM_WIDE_SETTING_ACTIONS.GREATER_THAN.value) {
+      boolVals = [...boolVals, value > settingsValue];
+    } else if (
+      action === SYSTEM_WIDE_SETTING_ACTIONS.GREATER_THAN_OR_EQUALS_TO.value
+    ) {
+      boolVals = [...boolVals, value >= settingsValue];
+    } else if (action === SYSTEM_WIDE_SETTING_ACTIONS.LESS_THAN.value) {
+      boolVals = [...boolVals, value < settingsValue];
+    } else if (
+      action === SYSTEM_WIDE_SETTING_ACTIONS.LESS_THAN_OR_EQUALS_TO.value
+    ) {
+      boolVals = [...boolVals, value <= settingsValue];
+    } else {
+      //default false.
+      boolVals = [...boolVals, false];
+    }
+  }
+
+  let returnStatus = false;
+  if (any && boolVals.indexOf(true) !== -1) {
+    returnStatus = true;
+  } else if (!any && boolVals.indexOf(false) !== -1) {
+    //check if there is a falsey value
+    returnStatus = false;
+  } else if (!any && boolVals.indexOf(true) !== -1) {
+    //check if there is a truthy value
+    returnStatus = true;
+  }
+
+  return returnStatus;
+};
+
+/**
+ * Extract value of a dot notation path in an object.
+ * @required {*} obj {}
+ * @required {*} dotNotationPath x.y
+ * @returns val
+ */
+export const extractNestedKeyValueDotNotation = ({
+  obj,
+  dotNotationPath,
+  isInit = true,
+  pathList = [],
+}) => {
+  if (lodash.isEmpty(pathList) && !isInit) return obj;
+
+  pathList = !lodash.isEmpty(pathList)
+    ? pathList
+    : !lodash.isEmpty(dotNotationPath)
+    ? dotNotationPath.split(".")
+    : [];
+
+  const key = pathList.shift();
+
+  const value = lodash.isPlainObject(obj) ? obj[key] : undefined;
+
+  if (lodash.isUndefined(value)) return;
+
+  return extractNestedKeyValueDotNotation({
+    obj: value,
+    dotNotationPath,
+    isInit: false,
+    pathList,
+  });
 };
 
 /**
