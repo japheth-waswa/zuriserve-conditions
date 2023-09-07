@@ -628,10 +628,24 @@ export const SYSTEM_WIDE_SETTINGS = {
   DATASET_MODULE_WRITE: "datasetModule.write.status",
   DATASET_MODULE_DELETE: "datasetModule.delete.status",
   DATASET_MODULE_UPLOAD_DATA: "datasetModule.uploadData.status",
+
   DATASET_MODULE_CONFIGURE_PERMUTATION:
     "datasetModule.configurePermutation.status",
+  DATASET_MODULE_CONFIGURE_PERMUTATION_READ:
+    "datasetModule.configurePermutation.read.status",
+  DATASET_MODULE_CONFIGURE_PERMUTATION_WRITE:
+    "datasetModule.configurePermutation.write.status",
+  DATASET_MODULE_CONFIGURE_PERMUTATION_DELETE:
+    "datasetModule.configurePermutation.delete.status",
+
   DATASET_MODULE_CONFIGURE_OFFICER_ACCESS:
     "datasetModule.configureOfficerAccess.status",
+  DATASET_MODULE_CONFIGURE_OFFICER_ACCESS_READ:
+    "datasetModule.configureOfficerAccess.read.status",
+  DATASET_MODULE_CONFIGURE_OFFICER_ACCESS_WRITE:
+    "datasetModule.configureOfficerAccess.write.status",
+  DATASET_MODULE_CONFIGURE_OFFICER_ACCESS_DELETE:
+    "datasetModule.configureOfficerAccess.delete.status",
 
   EDMS_MODULE: "edmsModule.status",
   CLIENT_SESSION_MODULE: "clientSessionMenuModule.status",
