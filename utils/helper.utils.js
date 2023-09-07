@@ -570,14 +570,50 @@ export const SYSTEM_WIDE_SETTINGS = {
     "workflowModule.services.modifyService.status",
   WORKFLOW_MODULE_SERVICE_DELETE:
     "workflowModule.services.deleteService.status",
+
   WORKFLOW_MODULE_SERVICE_DEPARTMENTS:
     "workflowModule.services.serviceDepartments.status",
+  WORKFLOW_MODULE_SERVICE_DEPARTMENTS_READ:
+    "workflowModule.services.serviceDepartments.read.status",
+  WORKFLOW_MODULE_SERVICE_DEPARTMENTS_WRITE:
+    "workflowModule.services.serviceDepartments.write.status",
+  WORKFLOW_MODULE_SERVICE_DEPARTMENTS_DELETE:
+    "workflowModule.services.serviceDepartments.delete.status",
+
   WORKFLOW_MODULE_SERVICE_FEES: "workflowModule.services.serviceFees.status",
-  WORKFLOW_MODULE_SERVICE_STEPS: "workflowModule.services.serviceSteps.status",
+  WORKFLOW_MODULE_SERVICE_FEES_READ:
+    "workflowModule.services.serviceFees.read.status",
+  WORKFLOW_MODULE_SERVICE_FEES_WRITE:
+    "workflowModule.services.serviceFees.write.status",
+  WORKFLOW_MODULE_SERVICE_FEES_DELETE:
+    "workflowModule.services.serviceFees.delete.status",
+
+  WORKFLOW_MODULE_SERVICE_STEPS: "workflowModule.services.serviceStep.status",
+  WORKFLOW_MODULE_SERVICE_STEPS_READ:
+    "workflowModule.services.serviceStep.read.status",
+  WORKFLOW_MODULE_SERVICE_STEPS_WRITE:
+    "workflowModule.services.serviceStep.write.status",
+  WORKFLOW_MODULE_SERVICE_STEPS_DELETE:
+    "workflowModule.services.serviceStep.delete.status",
+
   WORKFLOW_MODULE_SERVICE_STEP_OBJECTS:
     "workflowModule.services.stepObjects.status",
+  WORKFLOW_MODULE_SERVICE_STEP_OBJECTS_READ:
+    "workflowModule.services.stepObjects.read.status",
+  WORKFLOW_MODULE_SERVICE_STEP_OBJECTS_WRITE:
+    "workflowModule.services.stepObjects.write.status",
+  WORKFLOW_MODULE_SERVICE_STEP_OBJECTS_DELETE:
+    "workflowModule.services.stepObjects.delete.status",
+
   WORKFLOW_MODULE_SERVICE_ENDRESULT:
     "workflowModule.services.serviceEndresult.status",
+  WORKFLOW_MODULE_SERVICE_ENDRESULT_READ:
+    "workflowModule.services.serviceEndresult.read.status",
+  WORKFLOW_MODULE_SERVICE_ENDRESULT_WRITE:
+    "workflowModule.services.serviceEndresult.write.status",
+  WORKFLOW_MODULE_SERVICE_ENDRESULT_DELETE:
+    "workflowModule.services.serviceEndresult.delete.status",
+
   WORKFLOW_MODULE_INITIATE_TRANSACTION:
     "workflowModule.services.initiateTransaction.status",
   WORKFLOW_MODULE_SERVICE_TRANSITION:
