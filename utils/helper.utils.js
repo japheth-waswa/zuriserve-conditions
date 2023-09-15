@@ -651,6 +651,16 @@ export const SYSTEM_WIDE_SETTINGS = {
   CLIENT_SESSION_MODULE: "clientSessionMenuModule.status",
 };
 
+export const EDMS_RESOURCE_ACTION_TYPE = {
+  MOVE: "move",
+  COPY: "copy",
+};
+
+export const EDMS_LINK_SHARE_RIGHTS = {
+  VIEW: { value: "view", label: "Can View" },
+  EDIT: { value: "edit", label: "Can Edit" },
+};
+
 export const SYSTEM_WIDE_SETTING_ACTIONS = {
   EQUALS: { value: "equals", label: "EqualS" },
   NOT_EQUAL: { value: "notEquals", label: "Not Equals" },
