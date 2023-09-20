@@ -661,6 +661,11 @@ export const EDMS_LINK_SHARE_RIGHTS = {
   EDIT: { value: "edit", label: "Can Edit" },
 };
 
+export const EDMS_LAYOUT_TYPE = {
+  LIST: "list",
+  GRID: "grid",
+};
+
 export const SYSTEM_WIDE_SETTING_ACTIONS = {
   EQUALS: { value: "equals", label: "EqualS" },
   NOT_EQUAL: { value: "notEquals", label: "Not Equals" },
