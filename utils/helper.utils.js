@@ -614,10 +614,39 @@ export const SYSTEM_WIDE_SETTINGS = {
   WORKFLOW_MODULE_SERVICE_ENDRESULT_DELETE:
     "workflowModule.services.serviceEndresult.delete.status",
 
-  WORKFLOW_MODULE_INITIATE_TRANSACTION:
-    "workflowModule.services.initiateTransaction.status",
-  WORKFLOW_MODULE_SERVICE_TRANSITION:
-    "workflowModule.services.serviceTransition.status",
+  WORKFLOW_MODULE_SERVICE_TRANSACTION_TRANSITION:
+    "workflowModule.services.transaction.transitionTransaction.status",
+  WORKFLOW_MODULE_SERVICE_TRANSACTION_INITIATE:
+    "workflowModule.services.transaction.initiateTransaction.status",
+  WORKFLOW_MODULE_SERVICE_TRANSACTION_HISTORY_LIST:
+    "workflowModule.services.transaction.transactionHistoryList.status",
+  WORKFLOW_MODULE_SERVICE_TRANSACTION_FETCH_DATA:
+    "workflowModule.services.transaction.fetchTransactionData.status",
+  WORKFLOW_MODULE_SERVICE_TRANSACTION_MODIFY_DATA:
+    "workflowModule.services.transaction.modifyTransactionData.status",
+  WORKFLOW_MODULE_SERVICE_TRANSACTION_FETCH_STEPS:
+    "workflowModule.services.transaction.fetchTransactionSteps.status",
+  WORKFLOW_MODULE_SERVICE_TRANSACTION_COMPUTE_FEES:
+    "workflowModule.services.transaction.computeTransactionFees.status",
+  WORKFLOW_MODULE_SERVICE_TRANSACTION_FETCH_SUMMARY:
+    "workflowModule.services.transaction.fetchTransactionSummary.status",
+  WORKFLOW_MODULE_SERVICE_TRANSACTION_LINK_USER:
+    "workflowModule.services.transaction.linkUser.status",
+  WORKFLOW_MODULE_SERVICE_TRANSACTION_MANAGE_UNCLAIMED:
+    "workflowModule.services.transaction.manageUnclaimed.status",
+  WORKFLOW_MODULE_SERVICE_TRANSACTION_MANAGE_CLAIMED:
+    "workflowModule.services.transaction.manageClaimed.status",
+  WORKFLOW_MODULE_SERVICE_TRANSACTION_MANAGE_RETURNED:
+    "workflowModule.services.transaction.manageReturned.status",
+  WORKFLOW_MODULE_SERVICE_TRANSACTION_MANAGE_REJECTED:
+    "workflowModule.services.transaction.manageRejected.status",
+  WORKFLOW_MODULE_SERVICE_TRANSACTION_MANAGE_APPROVED:
+    "workflowModule.services.transaction.manageApproved.status",
+
+  // WORKFLOW_MODULE_INITIATE_TRANSACTION:
+  //   "workflowModule.services.initiateTransaction.status",
+  // WORKFLOW_MODULE_SERVICE_TRANSITION:
+  //   "workflowModule.services.serviceTransition.status",
 
   PAYMENT_MODULE: "paymentModule.status",
   ANALYTICS_MODULE: "analyticsModule.status",
