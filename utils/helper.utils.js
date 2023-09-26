@@ -588,13 +588,13 @@ export const SYSTEM_WIDE_SETTINGS = {
   WORKFLOW_MODULE_SERVICE_FEES_DELETE:
     "workflowModule.services.serviceFees.delete.status",
 
-  WORKFLOW_MODULE_SERVICE_STEPS: "workflowModule.services.serviceStep.status",
+  WORKFLOW_MODULE_SERVICE_STEPS: "workflowModule.services.serviceSteps.status",
   WORKFLOW_MODULE_SERVICE_STEPS_READ:
-    "workflowModule.services.serviceStep.read.status",
+    "workflowModule.services.serviceSteps.read.status",
   WORKFLOW_MODULE_SERVICE_STEPS_WRITE:
-    "workflowModule.services.serviceStep.write.status",
+    "workflowModule.services.serviceSteps.write.status",
   WORKFLOW_MODULE_SERVICE_STEPS_DELETE:
-    "workflowModule.services.serviceStep.delete.status",
+    "workflowModule.services.serviceSteps.delete.status",
 
   WORKFLOW_MODULE_SERVICE_STEP_OBJECTS:
     "workflowModule.services.stepObjects.status",
