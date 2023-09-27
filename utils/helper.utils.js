@@ -710,6 +710,27 @@ export const SYSTEM_WIDE_SETTING_ACTIONS = {
   },
 };
 
+export const DATE_COMPUTE_FIELD_TYPES = {
+  CUSTOM: { value: "custom", label: "Custom" },
+  FIELD: { value: "field", label: "Field" },
+};
+
+export const DATE_COMPUTE_OPERAND_DIFF = {
+  NONE: { value: "", label: "None" },
+  START: { value: "start", label: "Start" },
+  END: { value: "end", label: "End" },
+};
+
+export const DATE_COMPUTE_OPERAND_DIFF_TYPE = {
+  SECOND: { value: "second", label: "Second" },
+  MINUTE: { value: "minute", label: "Minute" },
+  HOUR: { value: "hour", label: "Hour" },
+  DAY: { value: "day", label: "Day" },
+  WEEK: { value: "week", label: "Week" },
+  MONTH: { value: "month", label: "Month" },
+  YEAR: { value: "year", label: "Year" },
+};
+
 // export const OBJECT_API_TYPE = { INPUT: "input", OUTPUT: "output" };
 
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
