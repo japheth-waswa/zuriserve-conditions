@@ -1248,6 +1248,75 @@ export const validateModuleAccess = ({
 };
 
 /**
+ * Extract value of a dot notation path in an object even when nested inside array
+ * @required {*} obj {}
+ * @required {*} dotNotationPath x.y
+ * @returns val
+ */
+const extractNestedKeyValueDotNotationSuper = ({
+  obj,
+  dotNotationPath,
+  isInit = true,
+  pathList = [],
+}) => {
+  if (lodash.isEmpty(pathList) && !isInit) return obj;
+
+  pathList = !lodash.isEmpty(pathList)
+    ? pathList
+    : !lodash.isEmpty(dotNotationPath)
+    ? dotNotationPath.split(".")
+    : [];
+
+  const key = pathList.shift();
+
+  const value = lodash.isPlainObject(obj) ? obj[key] : undefined;
+
+  //loop the array & flatten it finally on the result.
+  if (!lodash.isEmpty(pathList) && lodash.isArray(obj[key])) {
+    let parsedList = [];
+    for (const itemObj of obj[key]) {
+      const res = extractNestedKeyValueDotNotationSuper({
+        obj: { ...itemObj },
+        dotNotationPath,
+        isInit: false,
+        pathList: [...pathList],
+      });
+      parsedList = [...parsedList, res];
+    }
+    return parsedList;
+  }
+
+  if (lodash.isUndefined(value)) return;
+
+  return extractNestedKeyValueDotNotationSuper({
+    obj: value,
+    dotNotationPath,
+    isInit: false,
+    pathList,
+  });
+};
+export const extractNestedKeyValueDotNotationSuperInit = ({
+  obj,
+  dotNotationPath,
+  isInit = true,
+  pathList = [],
+  flattenNestedArray = false,
+}) => {
+  const res = extractNestedKeyValueDotNotationSuper({
+    obj,
+    dotNotationPath,
+    isInit,
+    pathList,
+  });
+
+  if (!lodash.isArray(res) || !flattenNestedArray) return res;
+
+  const flattenedRes = lodash.flattenDeep(res);
+
+  return flattenedRes;
+};
+
+/**
  * Extract value of a dot notation path in an object.
  * @required {*} obj {}
  * @required {*} dotNotationPath x.y
