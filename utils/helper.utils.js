@@ -831,6 +831,13 @@ export const IMAGE_BUILDER_OPENING_CLOSING_TAGS_UTIL = {
   stringVarClosingStr: "⟗",
 };
 
+export const FEE_FORMULAE_OPENING_CLOSING_TAGS_UTIL = {
+  stringVarOpening: /◎/g,
+  stringVarOpeningStr: "◎",
+  stringVarClosing: /◉/g,
+  stringVarClosingStr: "◉",
+};
+
 export const ENDRESULT_STATICS = {
   "transaction ref no": {
     label: "transaction ref no",
