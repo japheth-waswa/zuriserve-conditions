@@ -267,6 +267,7 @@ export const REQUEST_DATA_PAYLOAD_TYPES = {
 };
 
 export const API_AUTH_TYPES = {
+  NONE: { value: "none", label: "None" },
   ACCESS_TOKEN: { value: "accessToken", label: "Access Token" },
   BASIC_AUTH: { value: "basicAuth", label: "Basic Auth" },
 };
