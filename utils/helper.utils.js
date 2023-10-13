@@ -679,6 +679,10 @@ export const SYSTEM_WIDE_SETTINGS = {
 
   EDMS_MODULE: "edmsModule.status",
   CLIENT_SESSION_MODULE: "clientSessionMenuModule.status",
+  CRONJOB_MODULE_READ: "cronjobModule.read.status",
+  CRONJOB_MODULE_WRITE: "cronjobModule.write.status",
+  CRONJOB_MODULE_DELETE: "cronjobModule.delete.status",
+  CRONJOB_MODULE_EXECUTE: "cronjobModule.execute.status",
 };
 
 export const EDMS_RESOURCE_ACTION_TYPE = {
