@@ -944,6 +944,60 @@ export const ENDRESULT_STATICS = {
     type: "currentDepartmentWithLevelApprovers",
   },
 
+  //--new start
+  "current department status": {
+    label: "current department status",
+    value: "currentDepartmentStatus",
+    type: "currentDepartmentStatus",
+  },
+  "current department created date": {
+    label: "current department created date",
+    value: "currentDepartmentCreatedDate",
+    type: "currentDepartmentCreatedDate",
+  },
+  "current department updated date": {
+    label: "current department updated date",
+    value: "currentDepartmentUpdatedDate",
+    type: "currentDepartmentUpdatedDate",
+  },
+  "current department name": {
+    label: "current department name",
+    value: "currentDepartmentName",
+    type: "currentDepartmentName",
+  },
+  "current department level name": {
+    label: "current department level name",
+    value: "currentDepartmentLevelName",
+    type: "currentDepartmentLevelName",
+  },
+  "current department level approval status": {
+    //at the department level
+    label: "current department level approval status",
+    value: "currentDepartmentLevelApprovalStatus",
+    type: "currentDepartmentLevelApprovalStatus",
+  },
+  "current department level user full names": {
+    label: "current department level user full names",
+    value: "currentDepartmentLevelUserFullNames",
+    type: "currentDepartmentLevelUserFullNames",
+  },
+  "current department level username": {
+    label: "current department level username",
+    value: "currentDepartmentLevelUsername",
+    type: "currentDepartmentLevelUsername",
+  },
+  "current department level assign date": {
+    label: "current department level assign date",
+    value: "currentDepartmentLevelAssignDate",
+    type: "currentDepartmentLevelAssignDate",
+  },
+  "current department level completion date": {
+    label: "current department level completion date",
+    value: "currentDepartmentLevelCompletionDate",
+    type: "currentDepartmentLevelCompletionDate",
+  },
+  //--new end
+
   "previous departments": {
     label: "previous departments",
     value: "previousDepartments",
@@ -987,6 +1041,129 @@ export const ENDRESULT_STATICS = {
     type: "transactionVerificationURL",
   },
 };
+
+export const ENDRESULT_STATICS_GROUP = {
+  generic: {
+    ["transaction verification url"]: {
+      ...ENDRESULT_STATICS["transaction verification url"],
+    },
+    ["file verification url"]: {
+      ...ENDRESULT_STATICS["file verification url"],
+    },
+    ["current date"]: {
+      ...ENDRESULT_STATICS["current date"],
+    },
+    ["transaction ref no"]: {
+      ...ENDRESULT_STATICS["transaction ref no"],
+    },
+    ["service name"]: {
+      ...ENDRESULT_STATICS["service name"],
+    },
+    ["transaction creation date"]: {
+      ...ENDRESULT_STATICS["transaction creation date"],
+    },
+    ["transaction completion date"]: {
+      ...ENDRESULT_STATICS["transaction completion date"],
+    },
+    ["transaction initiator username"]: {
+      ...ENDRESULT_STATICS["transaction initiator username"],
+    },
+    ["transaction initiator full names"]: {
+      ...ENDRESULT_STATICS["transaction initiator full names"],
+    },
+    ["transaction initiator first name"]: {
+      ...ENDRESULT_STATICS["transaction initiator first name"],
+    },
+    ["transaction initiator phone"]: {
+      ...ENDRESULT_STATICS["transaction initiator phone"],
+    },
+    ["transaction initiator email"]: {
+      ...ENDRESULT_STATICS["transaction initiator email"],
+    },
+    ["transaction initiator boxoffice"]: {
+      ...ENDRESULT_STATICS["transaction initiator boxoffice"],
+    },
+  },
+  client: {
+    ["client username"]: {
+      ...ENDRESULT_STATICS["client username"],
+    },
+    ["client full names"]: {
+      ...ENDRESULT_STATICS["client full names"],
+    },
+    ["client first name"]: {
+      ...ENDRESULT_STATICS["client first name"],
+    },
+    ["client phone"]: {
+      ...ENDRESULT_STATICS["client phone"],
+    },
+    ["client email"]: {
+      ...ENDRESULT_STATICS["client email"],
+    },
+    ["client boxoffice"]: {
+      ...ENDRESULT_STATICS["client boxoffice"],
+    },
+  },
+  department: {
+    ["current department"]: {
+      ...ENDRESULT_STATICS["current department"],
+    },
+    ["current department with levels"]: {
+      ...ENDRESULT_STATICS["current department with levels"],
+    },
+    ["current department with level approvers"]: {
+      ...ENDRESULT_STATICS["current department with level approvers"],
+    },
+    ["previous departments"]: {
+      ...ENDRESULT_STATICS["previous departments"],
+    },
+    ["previous departments with levels"]: {
+      ...ENDRESULT_STATICS["previous departments with levels"],
+    },
+    ["previous departments with level approvers"]: {
+      ...ENDRESULT_STATICS["previous departments with level approvers"],
+    },
+    ["next departments"]: {
+      ...ENDRESULT_STATICS["next departments"],
+    },
+    ["next departments with levels"]: {
+      ...ENDRESULT_STATICS["next departments with levels"],
+    },
+
+    //start
+    ["current department status"]: {
+      ...ENDRESULT_STATICS["current department status"],
+    },
+    ["current department created date"]: {
+      ...ENDRESULT_STATICS["current department created date"],
+    },
+    ["current department updated date"]: {
+      ...ENDRESULT_STATICS["current department updated date"],
+    },
+    ["current department name"]: {
+      ...ENDRESULT_STATICS["current department name"],
+    },
+    ["current department level name"]: {
+      ...ENDRESULT_STATICS["current department level name"],
+    },
+    ["current department level approval status"]: {
+      ...ENDRESULT_STATICS["current department level approval status"],
+    },
+    ["current department level user full names"]: {
+      ...ENDRESULT_STATICS["current department level user full names"],
+    },
+    ["current department level username"]: {
+      ...ENDRESULT_STATICS["current department level username"],
+    },
+    ["current department level assign date"]: {
+      ...ENDRESULT_STATICS["current department level assign date"],
+    },
+    ["current department level completion date"]: {
+      ...ENDRESULT_STATICS["current department level completion date"],
+    },
+  },
+};
+
 export const ENDRESULT_DECORATORS = {
   "to lowercase": {
     label: "to lowercase",
