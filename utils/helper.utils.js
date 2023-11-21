@@ -736,6 +736,12 @@ export const DATE_COMPUTE_OPERAND_DIFF_TYPE = {
   YEAR: { value: "year", label: "Year" },
 };
 
+export const END_RESULT_STATUSES = {
+  APPROVED: { value: 1, label: "Approved" },
+  RETURNED: { value: 3, label: "Returned" },
+  REJECTED: { value: 2, label: "Rejected" },
+};
+
 // export const OBJECT_API_TYPE = { INPUT: "input", OUTPUT: "output" };
 
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
@@ -981,6 +987,21 @@ export const ENDRESULT_STATICS = {
     value: "currentDepartmentLevelUserFullNames",
     type: "currentDepartmentLevelUserFullNames",
   },
+  "current department level user first name": {
+    label: "current department level user first name",
+    value: "currentDepartmentLevelUserFirstname",
+    type: "currentDepartmentLevelUserFirstname",
+  },
+  "current department level user phone number": {
+    label: "current department level user phone number",
+    value: "currentDepartmentLevelUserPhonenumber",
+    type: "currentDepartmentLevelUserPhonenumber",
+  },
+  "current department level user email address": {
+    label: "current department level user email address",
+    value: "currentDepartmentLevelUserEmailaddress",
+    type: "currentDepartmentLevelUserEmailaddress",
+  },
   "current department level username": {
     label: "current department level username",
     value: "currentDepartmentLevelUsername",
@@ -995,6 +1016,16 @@ export const ENDRESULT_STATICS = {
     label: "current department level completion date",
     value: "currentDepartmentLevelCompletionDate",
     type: "currentDepartmentLevelCompletionDate",
+  },
+  "current department level return message": {
+    label: "current department level return message",
+    value: "currentDepartmentLevelReturnMessage",
+    type: "currentDepartmentLevelReturnMessage",
+  },
+  "current department level reject message": {
+    label: "current department level reject message",
+    value: "currentDepartmentLevelRejectMessage",
+    type: "currentDepartmentLevelRejectMessage",
   },
   //--new end
 
@@ -1152,6 +1183,15 @@ export const ENDRESULT_STATICS_GROUP = {
     ["current department level user full names"]: {
       ...ENDRESULT_STATICS["current department level user full names"],
     },
+    ["current department level user first name"]: {
+      ...ENDRESULT_STATICS["current department level user first name"],
+    },
+    ["current department level user phone number"]: {
+      ...ENDRESULT_STATICS["current department level user phone number"],
+    },
+    ["current department level user email address"]: {
+      ...ENDRESULT_STATICS["current department level user email address"],
+    },
     ["current department level username"]: {
       ...ENDRESULT_STATICS["current department level username"],
     },
@@ -1160,6 +1200,12 @@ export const ENDRESULT_STATICS_GROUP = {
     },
     ["current department level completion date"]: {
       ...ENDRESULT_STATICS["current department level completion date"],
+    },
+    ["current department level return message"]: {
+      ...ENDRESULT_STATICS["current department level return message"],
+    },
+    ["current department level reject message"]: {
+      ...ENDRESULT_STATICS["current department level reject message"],
     },
   },
 };
