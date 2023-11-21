@@ -742,6 +742,22 @@ export const END_RESULT_STATUSES = {
   REJECTED: { value: 2, label: "Rejected" },
 };
 
+export const NOTIFICATION_USER_TYPES = {
+  SU: { value: "su", label: "Super Admins" },
+  ADMIN: { value: "admin", label: "Normal Admins" },
+  LOGGED_IN_USER: { value: "loggedInUser", label: "Logged in user" },
+  CLIENT: { value: "client", label: "Client" },
+  SERVICE_INITIATOR: { value: "serviceInitiator", label: "Service initiator" },
+  DEPARTMENT_LEVEL_USER: {
+    value: "serviceDepartmentLevelUser",
+    label: "Service department level user",
+  },
+  SERVICE_OBJECT_LABEL_FIELD: {
+    value: "serviceObjectLabelField",
+    label: "Service object label field",
+  },
+};
+
 // export const OBJECT_API_TYPE = { INPUT: "input", OUTPUT: "output" };
 
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
