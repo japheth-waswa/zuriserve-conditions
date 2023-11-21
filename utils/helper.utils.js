@@ -1022,10 +1022,31 @@ export const ENDRESULT_STATICS = {
     value: "currentDepartmentLevelReturnMessage",
     type: "currentDepartmentLevelReturnMessage",
   },
+  "current department level return date": {
+    label: "current department level return date",
+    value: "currentDepartmentLevelReturnDate",
+    type: "currentDepartmentLevelReturnDate",
+  },
+  "current department level return user full names": {
+    label: "current department level return user full names",
+    value: "currentDepartmentLevelReturnFullNames",
+    type: "currentDepartmentLevelReturnFullNames",
+  },
+
   "current department level reject message": {
     label: "current department level reject message",
     value: "currentDepartmentLevelRejectMessage",
     type: "currentDepartmentLevelRejectMessage",
+  },
+  "current department level reject date": {
+    label: "current department level reject date",
+    value: "currentDepartmentLevelRejectDate",
+    type: "currentDepartmentLevelRejectDate",
+  },
+  "current department level reject user full names": {
+    label: "current department level reject user full names",
+    value: "currentDepartmentLevelRejectFullNames",
+    type: "currentDepartmentLevelRejectFullNames",
   },
   //--new end
 
@@ -1204,8 +1225,21 @@ export const ENDRESULT_STATICS_GROUP = {
     ["current department level return message"]: {
       ...ENDRESULT_STATICS["current department level return message"],
     },
+    ["current department level return date"]: {
+      ...ENDRESULT_STATICS["current department level return date"],
+    },
+    ["current department level return user full names"]: {
+      ...ENDRESULT_STATICS["current department level return user full names"],
+    },
+
     ["current department level reject message"]: {
       ...ENDRESULT_STATICS["current department level reject message"],
+    },
+    ["current department level reject date"]: {
+      ...ENDRESULT_STATICS["current department level reject date"],
+    },
+    ["current department level reject user full names"]: {
+      ...ENDRESULT_STATICS["current department level reject user full names"],
     },
   },
 };
