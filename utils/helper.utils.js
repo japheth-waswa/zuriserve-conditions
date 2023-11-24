@@ -758,6 +758,11 @@ export const NOTIFICATION_USER_TYPES = {
   },
 };
 
+export const NOTIFICATION_USER_OBJECT_LABEL_TYPES = {
+  NORMAL: { value: "normal", label: "Normal Object Label" },
+  GROUPED: { value: "grouped", label: "Grouped Object Label" },
+};
+
 // export const OBJECT_API_TYPE = { INPUT: "input", OUTPUT: "output" };
 
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
