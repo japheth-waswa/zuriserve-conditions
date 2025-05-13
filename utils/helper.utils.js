@@ -763,6 +763,99 @@ export const NOTIFICATION_USER_OBJECT_LABEL_TYPES = {
   GROUPED: { value: "grouped", label: "Grouped Object Label" },
 };
 
+export const NUMBERING_SCHEME = {
+  DAY_SHORT: { value: "dayShort", label: "Day (short ie tue)" },
+  DAY_LONG: { value: "dayLong", label: "Day (long ie wednesday)" },
+  DAY_OF_MONTH_WITH_ZERO: {
+    value: "dayOfMonthWithZero",
+    label: "Day of month (with 0 ie 09)",
+  },
+  DAY_OF_MONTH_WITHOUT_ZERO: {
+    value: "dayOfMonthWithoutZero",
+    label: "Day of month (without 0 ie 7)",
+  },
+  DAY_OF_YEAR_WITH_ZERO: {
+    value: "dayOfYearWithZero",
+    label: "Day of year (001-366)",
+  },
+  DAY_OF_YEAR_WITHOUT_ZERO: {
+    value: "dayOfYearWithoutZero",
+    label: "Day of year (1-366)",
+  },
+  DAY_OF_WEEK: {
+    value: "dayOfWeek",
+    label: "Day of week (1-7)",
+  },
+  WEEK_NUMBER: {
+    value: "weekNumber",
+    label: "Week number",
+  },
+  MONTH_SHORT: {
+    value: "monthShort",
+    label: "Month (short ie apr)",
+  },
+  MONTH_LONG: {
+    value: "monthLong",
+    label: "Month (long ie april)",
+  },
+  MONTH_WITH_ZERO: {
+    value: "monthWithZero",
+    label: "Month (with 0 ie 06)",
+  },
+  MONTH_WITHOUT_ZERO: {
+    value: "monthWithoutZero",
+    label: "Month (without 0 ie 6)",
+  },
+  YEAR_2_DIGITS: {
+    value: "year2Digits",
+    label: "Year (2 digits ie 19)",
+  },
+  YEAR_4_DIGITS: {
+    value: "year4Digits",
+    label: "Year (4 digits ie 2019)",
+  },
+  HOUR_24_WITH_ZERO: {
+    value: "hour24WithZero",
+    label: "Hour (24h, with 0)",
+  },
+  HOUR_24_WITHOUT_ZERO: {
+    value: "hour24WithoutZero",
+    label: "Hour (24h, without 0)",
+  },
+  HOUR_12_WITH_ZERO: {
+    value: "hour12WithZero",
+    label: "Hour (12h, with 0)",
+  },
+  HOUR_12_WITHOUT_ZERO: {
+    value: "hour12WithoutZero",
+    label: "Hour (12h, without 0)",
+  },
+  MINUTE_WITH_ZERO: {
+    value: "minuteWithZero",
+    label: "Minute (with 0)",
+  },
+  MINUTE_WITHOUT_ZERO: {
+    value: "minuteWithoutZero",
+    label: "Minute (without 0)",
+  },
+  SECOND_WITH_ZERO: {
+    value: "secondWithZero",
+    label: "Second (with 0)",
+  },
+  SECOND_WITHOUT_ZERO: {
+    value: "secondWithoutZero",
+    label: "Second (without 0)",
+  },
+  AM_PM_UPPERCASE: {
+    value: "amPmUppercase",
+    label: "AM/PM",
+  },
+  AM_PM_LOWERCASE: {
+    value: "amPmLowercase",
+    label: "am/pm",
+  },
+};
+
 // export const OBJECT_API_TYPE = { INPUT: "input", OUTPUT: "output" };
 
 export const DB_DATE_FORMAT = "YYYY-MM-DD HH:mm:ss";
